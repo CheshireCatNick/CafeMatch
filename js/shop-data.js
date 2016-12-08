@@ -32,7 +32,7 @@
 //const shops = [];
 
 // data edited by Philip
-const shops = [{
+const shops = [
   "1": {
     "id": 1,
     "name": "Puchi Space 小空間",
@@ -6369,4 +6369,4 @@ const shops = [{
     "lon": 121.5306589,
     }
   }
-}];
+];
