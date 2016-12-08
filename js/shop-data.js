@@ -1,5 +1,5 @@
 /*
- * @description: data of cofe shop
+ * @description: data of cafe shop
  */
 
 // shop object example
