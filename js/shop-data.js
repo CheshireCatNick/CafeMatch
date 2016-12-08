@@ -21,7 +21,7 @@ const shop = {
   hasStandWorkPlace: true,
   recommender: 'Philip',
   comment: 'A nice place for studying~',
-  webpage: 'https://www.facebook.com/puchispace',
+  webPage: 'https://www.facebook.com/puchispace',
   pos: {
     lat: 25.09,
     lan: 121.46
