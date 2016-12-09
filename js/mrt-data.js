@@ -1,5 +1,4 @@
-
- const mrt = [
+const mrts = [
     {
       "mrt_id": 1,
       "station": "忠孝復興站",
@@ -864,4 +863,5 @@
       "lon": 121.5775295
       }
     }
-  ]
+  ];
+//module.exports = mrts;
