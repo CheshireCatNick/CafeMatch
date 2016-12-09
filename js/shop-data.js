@@ -2584,7 +2584,7 @@
       "coffee": 5,
       "price": 5,
       "decoration": 4,
-      "distance_mrt": 4. 5 ,
+      "distance_mrt": 4.5 ,
       "time": "11:00-22:00 週日公休",
       "mrt": "南京三民站",
       "address": "台北市松山區光復北路103巷38號",
