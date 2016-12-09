@@ -1,8 +1,9 @@
-const shops = [
+
+ const shops = [
     {
       "id": 1,
       "name": "Puchi Space 小空間",
-      "wifi_stable": 4,
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -10,29 +11,35 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00 - 19:00 周一休",
-      "mrt": "板橋",
+      "mrt": "板橋站",
       "address": "新北市板橋區建國街123號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/puchispace",
       "pos": {
       "lat": 25.0177464,
       "lon": 121.4607129
-      }
+      },
+      "mrt_id": 68
     },
     {
       "id": 2,
-      "name": "N cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 5,
-      "mrt": "北投",
+      "time": undefined,
+      "mrt": "北投站",
       "address": "台北市北投區育仁路18號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": true,
       "recommender": "Vervaak",
       "comment": "美式料理不錯",
@@ -40,19 +47,21 @@ const shops = [
       "pos": {
       "lat": 25.133059,
       "lon": 121.498359
-      }
+      },
+      "mrt_id": 54
     },
     {
       "id": 3,
-      "name": "拾米屋",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 4,
       "price": 3,
       "decoration": 3,
       "distance_mrt": 4,
-      "mrt": "北投",
+      "time": undefined,
+      "mrt": "北投站",
       "address": "台北市北投區大同街153號",
       "timelimit": true,
       "plug": true,
@@ -63,12 +72,13 @@ const shops = [
       "pos": {
       "lat": 25.1357885,
       "lon": 121.4989701
-      }
+      },
+      "mrt_id": 54
     },
     {
       "id": 4,
-      "name": "Cafe Solo Singer Life",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4.5,
@@ -76,22 +86,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "14:00-22:00 週一公休",
-      "mrt": "北投",
+      "mrt": "北投站",
       "address": "台北市北投區溫泉路7巷1弄1號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "時常看到帶著一檯電腦來工作坐一整天的人、住在隔壁民宿的外國人。menu比較簡單，在很難找的巷子裏面，很安靜，桌子大，適合工作一整天。",
       "web": "https://www.facebook.com/solosingerlife",
       "pos": {
       "lat": 25.134127,
       "lon": 121.502709
-      }
+      },
+      "mrt_id": 54
     },
     {
       "id": 5,
-      "name": "Falserma Coffee 諾馬咖啡-大安信義店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -99,19 +111,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "一~五07:30-18:30 六日09:00-17:30",
-      "mrt": "大安",
+      "mrt": "大安站",
       "address": "台北市大安區信義路三段178號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "好食、舒適環境、可愛阿貓、電影＆音樂、提供wifi、插座、可攜帶寵物、桌椅可依照需求擺放",
       "web": "https://www.facebook.com/FalsermaCoffeeTW/",
       "pos": {
       "lat": 25.0332364,
       "lon": 121.5423445
-      }
+      },
+      "mrt_id": 6
     },
     {
       "id": 6,
-      "name": "At Home Cafe",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -119,42 +136,49 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4.5,
       "time": "12:30~20:00",
-      "mrt": "大安",
+      "mrt": "大安站",
       "address": "台北市大安區信義路四段30巷29號1樓",
       "timelimit": false,
       "plug": false,
       "standplace": false,
+      "recommender": undefined,
       "comment": "手沖咖啡好喝且選擇多，價格合宜，點心輕食也用心",
+      "web": undefined,
       "pos": {
       "lat": 25.032058,
       "lon": 121.5446961
-      }
+      },
+      "mrt_id": 6
     },
     {
       "id": 7,
-      "name": "這間咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
       "price": 3,
       "decoration": 5,
       "distance_mrt": 5,
-      "mrt": "大安",
+      "time": undefined,
+      "mrt": "大安站",
       "address": "台北市大安區信義路四段30巷39號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/Zhejiancafe/",
       "pos": {
       "lat": 25.0318207,
       "lon": 121.5447824
-      }
+      },
+      "mrt_id": 6
     },
     {
       "id": 8,
-      "name": "理想時光",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.5,
       "coffee": 5,
@@ -162,21 +186,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "12:00-21:00 (周日公休)",
-      "mrt": "大安",
+      "mrt": "大安站",
       "address": "台北市大安區信義路四段30巷50弄1號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "咖啡好喝、牛肉麵等餐點超級好吃！而且友善親子！",
+      "web": undefined,
       "pos": {
       "lat": 25.0316796,
       "lon": 121.544421
-      }
+      },
+      "mrt_id": 6
     },
     {
       "id": 9,
-      "name": "小孩散步 TOT Ta-Ta",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -184,70 +211,82 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "12:00-21:00 週三公休",
-      "mrt": "大安",
+      "mrt": "大安站",
       "address": "台北市大安區信義路四段30巷52號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
       "recommender": "Yi",
       "comment": "非常溫馨安靜,就像在家裡, 老闆是一群可愛的年輕人",
+      "web": undefined,
       "pos": {
       "lat": 25.0317226,
       "lon": 121.5445594
-      }
+      },
+      "mrt_id": 6
     },
     {
       "id": 10,
-      "name": "Peace & Love Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3,
       "coffee": 5,
       "price": 2,
       "decoration": 4,
       "distance_mrt": 4.5,
-      "mrt": "大坪林",
+      "time": undefined,
+      "mrt": "大坪林站",
       "address": "新北市新店區民權路42巷18號",
+      "timelimit": undefined,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/palcafesmile",
       "pos": {
       "lat": 24.9835522,
       "lon": 121.5400076
-      }
+      },
+      "mrt_id": 29
     },
     {
       "id": 11,
-      "name": "躲貓貓咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 4.5,
-      "mrt": "大坪林",
+      "time": undefined,
+      "mrt": "大坪林站",
       "address": "新北市新店區民權路42巷21-1號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "空間寬闊，但常常有媽媽帶小孩，不小心遇到就會很吵",
       "web": "https://www.facebook.com/dmmcoffee",
       "pos": {
       "lat": 24.9826809,
       "lon": 121.541748
-      }
+      },
+      "mrt_id": 29
     },
     {
       "id": 12,
-      "name": "兜味, doorway cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4.5,
       "price": 3.5,
       "decoration": 4,
       "distance_mrt": 3,
-      "mrt": "大橋頭",
+      "time": undefined,
+      "mrt": "大橋頭站",
       "address": "台北市大同區安西街36號",
       "timelimit": false,
       "plug": true,
@@ -258,30 +297,38 @@ const shops = [
       "pos": {
       "lat": 25.059313,
       "lon": 121.510053
-      }
+      },
+      "mrt_id": 82
     },
     {
       "id": 13,
-      "name": "Modern Mode Caf?",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
-      "coffee": ,
+      "coffee": undefined,
       "price": 3.5,
       "decoration": 4.5,
       "distance_mrt": 4.5,
-      "mrt": "大橋頭",
+      "time": undefined,
+      "mrt": "大橋頭站",
       "address": "台北市大同區迪化街一段278號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/modernmode11/",
       "pos": {
       "lat": 25.0609297,
       "lon": 121.5092488
-      }
+      },
+      "mrt_id": 82
     },
     {
       "id": 14,
-      "name": "392 caf?",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 5,
@@ -289,21 +336,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "11:30~18:00 (週三公休)",
-      "mrt": "大橋頭",
+      "mrt": "大橋頭站",
       "address": "台北市大同區民生西路392號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/392cafe/",
       "pos": {
       "lat": 25.05678,
       "lon": 121.509552
-      }
+      },
+      "mrt_id": 82
     },
     {
       "id": 15,
-      "name": "杜鵑窩 CUCKOO's NEST",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -311,22 +361,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "13:30 - 00:30",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區北安路458巷41弄52號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "飲料食物都很好吃，還有賣水餃，從下午坐到半夜都ok，店貓會晃來晃去",
       "web": "https://www.facebook.com/CUCKOOSNESTCAFE/",
       "pos": {
       "lat": 25.0790489,
       "lon": 121.54653
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 16,
-      "name": "棗點Breakfirst",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -334,22 +386,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "13:00 - 20:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區北安路573巷15號1樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "Anny",
       "comment": "很安靜、很悠閒，還有幾隻可愛的店貓",
+      "web": undefined,
       "pos": {
       "lat": 25.0813816,
       "lon": 121.5476496
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 17,
-      "name": "棗點Breakfirst",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -357,22 +411,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 3.5,
       "time": "11:00 - 20:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區北安路573巷15號1樓",
       "timelimit": false,
       "plug": false,
       "standplace": false,
       "recommender": "jing su",
       "comment": "自製甜點非常好吃，店裡安靜連老闆跟客人聊天都聽的很清楚，可惜比較早關店，",
+      "web": undefined,
       "pos": {
       "lat": 25.0813816,
       "lon": 121.5476496
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 18,
-      "name": "穆勒咖啡館 Cafe Muller",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.3,
       "coffee": 5,
@@ -380,22 +436,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "週日~四11:30~23:00 週五六11:30~01:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區北安路595巷33號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "使用公平貿易咖啡，餐點原物料都很實在美味～店裡常播放小眾音樂，書多還有一些經典漫畫！禮拜五固定有樂手駐唱",
       "web": "https://www.facebook.com/%E7%A9%86%E5%8B%92%E5%92%96%E5%95%A1%E9%A4%A8-106449009394195/",
       "pos": {
       "lat": 25.0822067,
       "lon": 121.5471329
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 19,
-      "name": "Balcony 陽台 Caf?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -403,22 +461,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "11:00 - 22:00 週一公休",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區大直街34巷20號2樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "有手作蛋糕餅乾、三明治和咖啡、比利時啤酒，甜點超美味～",
       "web": "https://www.facebook.com/balconycafe2F/",
       "pos": {
       "lat": 25.0815898,
       "lon": 121.5456466
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 20,
-      "name": "索引文創",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.5,
       "coffee": 4,
@@ -426,22 +486,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "13:00 - 21:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區大直街34巷30號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
       "recommender": "jing su",
       "comment": "有巨大桌子非常適合美術系/設計系的同學做作業，很安靜，蠻大的複合式工作空間，挑高與夾層設計非常特殊也很舒服，經常有靜態的展覽",
+      "web": undefined,
       "pos": {
       "lat": 25.0816124,
       "lon": 121.5452818
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 21,
-      "name": "日木安",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
@@ -449,45 +511,49 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "14:00 - 22:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區大直街52巷26號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
       "recommender": "jing su",
       "comment": "店裡有一隻貓喜愛跟人互動（過敏者小心），店員與老闆和善熱愛跟客人聊天，下午很安靜，晚上許多實踐學生會去店裡討論作業，店裡接受帶酒邊做作業邊喝，另外廁所不在店裡，在隔壁的隔壁",
+      "web": undefined,
       "pos": {
       "lat": 25.0823859,
       "lon": 121.545382
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 22,
-      "name": "庫卡咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
-      "coffee": ,
+      "coffee": undefined,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 3,
       "time": "08:00-20:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區大直街57巷5號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "桌面寬度與高度很適合筆電工作。個人推薦飲料為橙皮可可。位置在巷內要找一下，咖啡品質由於本人不喝咖啡等其他人補充囉。",
       "web": "https://www.facebook.com/庫卡咖啡-KOOKA-COFFEE-100431256694014/",
       "pos": {
       "lat": 25.08345,
       "lon": 121.546834
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 23,
-      "name": "安捷路易咖啡館 (台北館）",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
@@ -495,7 +561,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 3.5,
       "time": "11:00 - 21:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區大直街99號1樓",
       "timelimit": false,
       "plug": false,
@@ -506,12 +572,13 @@ const shops = [
       "pos": {
       "lat": 25.084046,
       "lon": 121.547498
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 24,
-      "name": "IT Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -519,7 +586,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "09:00–22:00",
-      "mrt": "大直",
+      "mrt": "大直站",
       "address": "台北市中山區明水路575號",
       "timelimit": false,
       "plug": true,
@@ -530,12 +597,13 @@ const shops = [
       "pos": {
       "lat": 25.0798305,
       "lon": 121.5519134
-      }
+      },
+      "mrt_id": 15
     },
     {
       "id": 25,
-      "name": "Han's Cafe（永和頂溪國小旁）",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -543,7 +611,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00-19:00 週六週一公休",
-      "mrt": "頂溪",
+      "mrt": "頂溪站",
       "address": "新北市永和區文化路135巷4號",
       "timelimit": false,
       "plug": true,
@@ -554,20 +622,23 @@ const shops = [
       "pos": {
       "lat": 25.01583,
       "lon": 121.51071
-      }
+      },
+      "mrt_id": 36
     },
     {
       "id": 26,
-      "name": "溫床 NEST",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
-      "distance_mrt": TRUE,
-      "mrt": "東門",
+      "distance_mrt": 4,
+      "time": undefined,
+      "mrt": "東門站",
       "address": "台北市大安區信義路二段198巷38號",
+      "timelimit": undefined,
       "plug": false,
       "standplace": true,
       "recommender": "aphasia",
@@ -576,12 +647,13 @@ const shops = [
       "pos": {
       "lat": 25.03025,
       "lon": 121.531324
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 27,
-      "name": "微客棧人文空間",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3,
@@ -589,7 +661,7 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 3,
       "time": "11:30~21:00",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市大安區信義路二段44巷10弄6號",
       "timelimit": false,
       "plug": true,
@@ -600,12 +672,13 @@ const shops = [
       "pos": {
       "lat": 25.034062,
       "lon": 121.525258
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 28,
-      "name": "伊士曼寧",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4.5,
@@ -613,7 +686,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "10:00-21:00",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市大安區信義路二段86巷2-1號",
       "timelimit": false,
       "plug": true,
@@ -624,12 +697,13 @@ const shops = [
       "pos": {
       "lat": 25.0333844,
       "lon": 121.5319272
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 29,
-      "name": "Powder Workshop",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4,
@@ -637,7 +711,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "09:00-18:00 (週二公休)",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市大安區信義路二段86巷25號",
       "timelimit": false,
       "plug": true,
@@ -648,12 +722,13 @@ const shops = [
       "pos": {
       "lat": 25.033877,
       "lon": 121.525769
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 30,
-      "name": "羊毛與花",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -661,8 +736,9 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "12:00~22:00",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市大安區永康街37巷12號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": true,
       "recommender": "Cos",
@@ -671,32 +747,38 @@ const shops = [
       "pos": {
       "lat": 25.030696,
       "lon": 121.529969
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 31,
-      "name": "forgood 好多咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "東門",
+      "time": undefined,
+      "mrt": "東門站",
       "address": "台北市大安區永康街41巷12號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
       "recommender": "匿名浣熊",
+      "comment": undefined,
       "web": "https://www.facebook.com/forgoodcafe/",
       "pos": {
       "lat": 25.0304039,
       "lon": 121.53002
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 32,
-      "name": "鴉埠咖啡 Yaboo",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
@@ -704,7 +786,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "12:00-24:00",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市大安區永康街41巷26號",
       "timelimit": false,
       "plug": true,
@@ -715,20 +797,23 @@ const shops = [
       "pos": {
       "lat": 25.030422,
       "lon": 121.530585
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 33,
-      "name": "小米酒咖啡館",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 5,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "東門",
+      "time": undefined,
+      "mrt": "東門站",
       "address": "台北市大安區永康街41巷5號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
@@ -737,12 +822,13 @@ const shops = [
       "pos": {
       "lat": 25.0305179,
       "lon": 121.52972
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 34,
-      "name": "息坐Shizen Coffee",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -750,43 +836,49 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "12:00 - 22:00",
-      "mrt": "東門",
+      "mrt": "東門站",
       "address": "台北市中正區臨沂街55-3號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "不定時有各式鹹派和蛋糕，咖啡好喝、乾淨舒適可久坐，店貓喀喀超可愛～",
       "web": "https://www.facebook.com/shizen.coffee/",
       "pos": {
       "lat": 25.0379507,
       "lon": 121.5293846
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 35,
-      "name": "小食糖 sugar bistro",
-      "wifi_stable": 3,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 3,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "東門",
+      "time": undefined,
+      "mrt": "東門站",
       "address": "台北市中正區信義路二段181巷3號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": true,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/sugar.bistro",
       "pos": {
       "lat": 25.0342524,
       "lon": 121.5294677
-      }
+      },
+      "mrt_id": 86
     },
     {
       "id": 36,
-      "name": "Falsem Falsem",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -794,20 +886,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "09:00–22:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區潮州街137號",
       "timelimit": false,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "餐點、飲料都好吃，有些特別的口味",
       "web": "https://www.facebook.com/FalsemFalsemtaipei/",
       "pos": {
       "lat": 25.028524,
       "lon": 121.5290376
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 37,
-      "name": "咖啡黑潮 Cafe Kuroshio",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 5,
@@ -815,22 +911,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 3,
       "time": "13:00-24:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區和平東路一段141巷9-1號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
       "recommender": "Jamie",
+      "comment": undefined,
       "web": "https://m.facebook.com/cafe.kuroshio/",
       "pos": {
       "lat": 25.027795,
       "lon": 121.530646
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 38,
-      "name": "貳月咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 2.5,
       "coffee": 3.5,
@@ -838,18 +936,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "11:00-19:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區青田街13-1號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/february.tw/",
       "pos": {
       "lat": 25.0268537,
       "lon": 121.5320929
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 39,
-      "name": "鄰居咖啡Neighbor's Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 3.5,
@@ -857,28 +961,32 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "營業時間：請對照FB上網頁說明",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區青田街2巷4號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/Neighbors-Cafe%E9%84%B0%E5%B1%85%E5%92%96%E5%95%A1-468611039942612/",
       "pos": {
       "lat": 25.028502,
       "lon": 121.531782
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 40,
-      "name": "青田七六",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 2.5,
       "coffee": 3,
-      "price": ,
+      "price": undefined,
       "decoration": 3,
       "distance_mrt": 3,
       "time": "11:30-21:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區青田街7巷6號",
       "timelimit": true,
       "plug": false,
@@ -889,12 +997,13 @@ const shops = [
       "pos": {
       "lat": 25.028051,
       "lon": 121.5325366
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 41,
-      "name": "515 Cafe&Books",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -902,19 +1011,24 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 3.5,
       "time": "11:30-23:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區永康街75巷22號",
       "timelimit": true,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/515-cafebooks-954340867956641/?fref=ts",
       "pos": {
       "lat": 25.028872,
       "lon": 121.531347
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 42,
-      "name": "多法妮Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
@@ -922,17 +1036,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "12:00-21:00 (週日公休)",
-      "mrt": "府中",
+      "mrt": "府中站",
       "address": "新北市板橋區文化路一段32巷23號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.011103,
       "lon": 121.460051
-      }
+      },
+      "mrt_id": 67
     },
     {
       "id": 43,
-      "name": "行旅者驛站",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -940,21 +1061,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "14:00 - 22:30 週一公休",
-      "mrt": "府中",
+      "mrt": "府中站",
       "address": "新北市板橋區忠孝路275號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
       "comment": "吧台座位居多，光線較為昏暗，但是通常人很少、很安靜，老闆娘超級親切",
+      "web": undefined,
       "pos": {
       "lat": 25.0030705,
       "lon": 121.467314
-      }
+      },
+      "mrt_id": 67
     },
     {
       "id": 44,
-      "name": "門廊咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -962,7 +1086,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "周一到週五：11:30 - 21:30\r\n周六12:00 - 21:30\r\n周日不營業",
-      "mrt": "輔大",
+      "mrt": "輔大站",
       "address": "新北市新莊區中正路514巷33弄10號",
       "timelimit": false,
       "plug": true,
@@ -973,12 +1097,13 @@ const shops = [
       "pos": {
       "lat": 25.021371,
       "lon": 121.412857
-      }
+      },
+      "mrt_id": 92
     },
     {
       "id": 45,
-      "name": "工寓咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 5,
@@ -986,7 +1111,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "10:00 - 22:00",
-      "mrt": "輔大",
+      "mrt": "輔大站",
       "address": "新北市新莊區中正路593號2樓",
       "timelimit": false,
       "plug": true,
@@ -997,12 +1122,13 @@ const shops = [
       "pos": {
       "lat": 25.032,
       "lon": 121.43291
-      }
+      },
+      "mrt_id": 92
     },
     {
       "id": 46,
-      "name": "HOHO cafe'",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
@@ -1010,29 +1136,32 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "10:00-20:00",
-      "mrt": "港墘",
+      "mrt": "港墘站",
       "address": "台北市內湖區江南街114號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "使用自家烘培咖啡豆（義式，手沖），手作甜點，手工熬煮養身飲料，價格親民，用料實在，環境像家一般舒適",
       "web": "https://www.facebook.com/pg/coffee.is.live/about/?ref=page_internal",
       "pos": {
       "lat": 25.0766158,
       "lon": 121.5762207
-      }
+      },
+      "mrt_id": 18
     },
     {
       "id": 47,
-      "name": "Moooon River Cafe & Books",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 2,
       "quiet": 4,
       "coffee": 5,
       "price": 1,
       "decoration": 5,
       "distance_mrt": 3,
-      "mrt": "港墘",
+      "time": undefined,
+      "mrt": "港墘站",
       "address": "台北市內湖區瑞光路218號",
       "timelimit": true,
       "plug": true,
@@ -1043,12 +1172,13 @@ const shops = [
       "pos": {
       "lat": 25.0754486,
       "lon": 121.5761204
-      }
+      },
+      "mrt_id": 18
     },
     {
       "id": 48,
-      "name": "BS and Drink",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -1056,7 +1186,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "平日11:00-20:00\r\n周末10:00-19:00",
-      "mrt": "港墘",
+      "mrt": "港墘站",
       "address": "台北市內湖區瑞光路11號",
       "timelimit": false,
       "plug": true,
@@ -1067,12 +1197,13 @@ const shops = [
       "pos": {
       "lat": 25.069492,
       "lon": 121.5838412
-      }
+      },
+      "mrt_id": 18
     },
     {
       "id": 49,
-      "name": "咖啡小劇場 Cafe Theatre",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 5,
@@ -1080,7 +1211,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "10:00-21:30 (週六公休)",
-      "mrt": "港墘",
+      "mrt": "港墘站",
       "address": "台北市內湖區文德路22巷9弄66號",
       "timelimit": false,
       "plug": false,
@@ -1091,12 +1222,13 @@ const shops = [
       "pos": {
       "lat": 25.076547,
       "lon": 121.579288
-      }
+      },
+      "mrt_id": 18
     },
     {
       "id": 50,
-      "name": "Waffle Please 比利時列日鬆餅專賣店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 3.5,
@@ -1104,21 +1236,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4,
       "time": "平日10:30-19:00\r\n周末09:00-19:00",
-      "mrt": "港墘",
+      "mrt": "港墘站",
       "address": "台北市內湖區港墘路127巷7號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/wafflepleasestore/",
       "pos": {
       "lat": 25.0778379,
       "lon": 121.5764709
-      }
+      },
+      "mrt_id": 18
     },
     {
       "id": 51,
-      "name": "Imperfect coffee(cafe)",
-      "wifi_stable": 3,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4,
@@ -1126,7 +1261,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "10:30-22:30",
-      "mrt": "公館",
+      "mrt": "公館站",
       "address": "台北市大安區新生南路三段96-5號",
       "timelimit": false,
       "plug": true,
@@ -1137,12 +1272,13 @@ const shops = [
       "pos": {
       "lat": 25.0173539,
       "lon": 121.533166
-      }
+      },
+      "mrt_id": 32
     },
     {
       "id": 52,
-      "name": "小公館Cafe / La Bistro Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 4,
@@ -1150,7 +1286,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4. 5 ,
       "time": "12:00~24:00",
-      "mrt": "公館",
+      "mrt": "公館站",
       "address": "台北市中正區羅斯福路三段316巷8弄3號2樓",
       "timelimit": false,
       "plug": true,
@@ -1161,12 +1297,13 @@ const shops = [
       "pos": {
       "lat": 25.0157793,
       "lon": 121.5326079
-      }
+      },
+      "mrt_id": 32
     },
     {
       "id": 53,
-      "name": "The Common",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -1174,7 +1311,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4.5,
       "time": "13:00-23:30",
-      "mrt": "公館",
+      "mrt": "公館站",
       "address": "台北市中正區羅斯福路四段138號3樓",
       "timelimit": false,
       "plug": true,
@@ -1185,12 +1322,13 @@ const shops = [
       "pos": {
       "lat": 25.0128126,
       "lon": 121.5358746
-      }
+      },
+      "mrt_id": 32
     },
     {
       "id": 54,
-      "name": "混hun",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4.5,
       "coffee": 4,
@@ -1198,7 +1336,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "13:00-22:30",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區和平東路一段104巷6號",
       "timelimit": false,
       "plug": true,
@@ -1209,12 +1347,13 @@ const shops = [
       "pos": {
       "lat": 25.0265347,
       "lon": 121.5248833
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 55,
-      "name": "Sugar Man Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -1222,8 +1361,9 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "14:00-04:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區和平東路一段87-1號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "Summer",
@@ -1232,12 +1372,13 @@ const shops = [
       "pos": {
       "lat": 25.02717,
       "lon": 121.525663
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 56,
-      "name": "早秋咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4,
       "coffee": 4,
@@ -1245,7 +1386,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "12:00-24:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市中正區晉江街10號",
       "timelimit": false,
       "plug": true,
@@ -1256,12 +1397,13 @@ const shops = [
       "pos": {
       "lat": 25.026052,
       "lon": 121.521129
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 57,
-      "name": "小路上。Dear Deer",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -1269,43 +1411,49 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "10:00-21:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市中正區羅斯福路二段77巷7號1-3F",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "安靜，餐點不多但是好吃。",
       "web": "https://www.facebook.com/deardeer2012/",
       "pos": {
       "lat": 25.0291044,
       "lon": 121.5212184
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 58,
-      "name": "生活在他方 elsewhere cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 4.5,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 3,
-      "mrt": "古亭",
+      "time": undefined,
+      "mrt": "古亭站",
       "address": "台北市中正區羅斯福路一段119巷3號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "座位沒有非常多，桌面有點狹窄，不太適合久坐/ 藝術相關書很多，如果只是看書寫東西很適合",
       "web": "https://www.facebook.com/elsewherecafe/",
       "pos": {
       "lat": 25.030489,
       "lon": 121.5206128
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 59,
-      "name": "暗角咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4.5,
       "coffee": 4,
@@ -1313,7 +1461,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "14:00-04:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市中正區廈門街1號",
       "timelimit": false,
       "plug": true,
@@ -1324,12 +1472,13 @@ const shops = [
       "pos": {
       "lat": 25.0271873,
       "lon": 121.5182974
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 60,
-      "name": "極簡咖啡廳 minimal cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -1337,39 +1486,49 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "12:00-23:00",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區泰順街2巷42號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "裡面有16隻貓，都很親人",
+      "web": undefined,
       "pos": {
       "lat": 25.025603,
       "lon": 121.529569
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 61,
-      "name": "NUKI Coffee",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 3,
-      "mrt": "古亭",
+      "time": undefined,
+      "mrt": "古亭站",
       "address": "台北市中正區金門街5-1號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/nukicafegallery/",
       "pos": {
       "lat": 25.0227745,
       "lon": 121.5245648
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 62,
-      "name": "日楞咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 5,
@@ -1377,7 +1536,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "08:00-20:30 週二公休",
-      "mrt": "古亭",
+      "mrt": "古亭站",
       "address": "台北市大安區浦城街24-1號",
       "timelimit": false,
       "plug": false,
@@ -1388,12 +1547,13 @@ const shops = [
       "pos": {
       "lat": 25.023057,
       "lon": 121.5267006
-      }
+      },
+      "mrt_id": 34
     },
     {
       "id": 63,
-      "name": "爐鍋咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 2,
       "coffee": 4.5,
@@ -1401,22 +1561,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 2,
       "time": "12:00 - 20:00 周一休",
-      "mrt": "關渡",
+      "mrt": "關渡站",
       "address": "台北市北投區大度路三段296巷39號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "自己烘培的咖啡",
       "web": "https://www.facebook.com/pg/luguocafetaiwan/about/?tab=page_info",
       "pos": {
       "lat": 25.124283,
       "lon": 121.466735
-      }
+      },
+      "mrt_id": 58
     },
     {
       "id": 64,
-      "name": "家溫度湯專門店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -1424,22 +1586,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "11:00 - 21:30",
-      "mrt": "國父紀念館",
+      "mrt": "國父紀念館站",
       "address": "台北市大安區光復南路240巷3號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "湯美味,沒有低銷,離捷運站又近!",
       "web": "https://www.facebook.com/%E5%AE%B6%E6%BA%AB%E5%BA%A6-%E6%B9%AF%E5%B0%88%E9%96%80%E5%BA%97-%E5%85%89%E5%BE%A9%E5%BA%97-1757808657807148/",
       "pos": {
       "lat": 25.0405554,
       "lon": 121.5571529
-      }
+      },
+      "mrt_id": 76
     },
     {
       "id": 65,
-      "name": "4am cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 3.5,
@@ -1447,20 +1611,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "14:00-04:00",
-      "mrt": "國父紀念館",
+      "mrt": "國父紀念館站",
       "address": "台北市大安區光復南路308巷38號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "有啤酒類，偏中高消費，可工作環境舒適，裝潢清爽。地下室有空間可以承租。",
+      "web": undefined,
       "pos": {
       "lat": 25.038983,
       "lon": 121.5557298
-      }
+      },
+      "mrt_id": 76
     },
     {
       "id": 66,
-      "name": "T&T cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 3.5,
@@ -1468,7 +1636,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "營業時間要依照FB",
-      "mrt": "後山埤",
+      "mrt": "後山埤站",
       "address": "台北市南港區永吉路544號",
       "timelimit": false,
       "plug": false,
@@ -1479,12 +1647,13 @@ const shops = [
       "pos": {
       "lat": 25.045139,
       "lon": 121.581551
-      }
+      },
+      "mrt_id": 79
     },
     {
       "id": 67,
-      "name": "Seeking Caf?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4.5,
@@ -1492,45 +1661,49 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "09:00-21:00 週一0900-1900",
-      "mrt": "葫洲",
+      "mrt": "葫洲站",
       "address": "台北市內湖區成功路五段420巷11號1樓",
       "timelimit": false,
       "plug": true,
       "standplace": true,
       "recommender": "2723T",
       "comment": "咖啡好喝程度受當天值班是哪位影響程度大",
+      "web": undefined,
       "pos": {
       "lat": 25.075307,
       "lon": 121.607784
-      }
+      },
+      "mrt_id": 22
     },
     {
       "id": 68,
-      "name": "ISAAC CAFE 撒子咖啡甜點店",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
-      "coffee": ,
+      "coffee": undefined,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
       "time": "11:30 - 20:30",
-      "mrt": "劍南路",
+      "mrt": "劍南路站",
       "address": "台北市中山區樂群三路77號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
       "recommender": "MO",
       "comment": "蛋糕好吃",
       "web": "https://www.facebook.com/ISAAC.DESSERT/?fref=ts",
       "pos": {
       "lat": 25.0826774,
       "lon": 121.553314
-      }
+      },
+      "mrt_id": 16
     },
     {
       "id": 69,
-      "name": "Cafe' de ZO",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -1538,7 +1711,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "中午12:00過後才開始營業",
-      "mrt": "江子翠",
+      "mrt": "江子翠站",
       "address": "新北市板橋區懷德街166號",
       "timelimit": false,
       "plug": true,
@@ -1549,12 +1722,13 @@ const shops = [
       "pos": {
       "lat": 25.030423,
       "lon": 121.479042
-      }
+      },
+      "mrt_id": 70
     },
     {
       "id": 70,
-      "name": "Percent CAFE %",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -1562,7 +1736,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4.5,
       "time": "08:00 - 21:00",
-      "mrt": "江子翠",
+      "mrt": "江子翠站",
       "address": "新北市板橋區仁化街67號1樓",
       "timelimit": false,
       "plug": false,
@@ -1573,12 +1747,13 @@ const shops = [
       "pos": {
       "lat": 25.0319033,
       "lon": 121.4756268
-      }
+      },
+      "mrt_id": 70
     },
     {
       "id": 71,
-      "name": "YoLo Cafe 有樂咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
       "coffee": 3.5,
@@ -1586,7 +1761,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4.5,
       "time": "09:00-18:00",
-      "mrt": "江子翠",
+      "mrt": "江子翠站",
       "address": "新北市板橋區文化路二段182巷3弄14號",
       "timelimit": false,
       "plug": false,
@@ -1597,12 +1772,13 @@ const shops = [
       "pos": {
       "lat": 25.0275849,
       "lon": 121.471941
-      }
+      },
+      "mrt_id": 70
     },
     {
       "id": 72,
-      "name": "Atts Coffee",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3,
       "coffee": 4,
@@ -1610,7 +1786,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "11:00-21:00",
-      "mrt": "江子翠",
+      "mrt": "江子翠站",
       "address": "新北市板橋區文化路二段182巷7弄3號",
       "timelimit": false,
       "plug": false,
@@ -1621,12 +1797,13 @@ const shops = [
       "pos": {
       "lat": 25.027149,
       "lon": 121.471952
-      }
+      },
+      "mrt_id": 70
     },
     {
       "id": 73,
-      "name": "三隻貓頭鷹3owls c＠fe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 3.5,
@@ -1634,7 +1811,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "08:30 - 21:30\r\n",
-      "mrt": "景安",
+      "mrt": "景安站",
       "address": "新北市中和區景安路136號2樓",
       "timelimit": false,
       "plug": true,
@@ -1645,34 +1822,38 @@ const shops = [
       "pos": {
       "lat": 24.994074,
       "lon": 121.504841
-      }
+      },
+      "mrt_id": 38
     },
     {
       "id": 74,
-      "name": "豆BAR",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
       "price": 5,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "景安",
+      "time": undefined,
+      "mrt": "景安站",
       "address": "新北市中和區南華路27號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/beanbarcoffee/",
       "pos": {
       "lat": 24.996286,
       "lon": 121.50291
-      }
+      },
+      "mrt_id": 38
     },
     {
       "id": 75,
-      "name": "室角舍記 ～咖啡議廊",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -1680,22 +1861,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "12:30~20:00 （週一、二公休）",
-      "mrt": "景美",
+      "mrt": "景美站",
       "address": "台北市文山區景華街23號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "近捷運2號出口、公車三福街口/景美國中/景華公園站",
       "web": "https://www.facebook.com/morecorner/",
       "pos": {
       "lat": 24.9950967,
       "lon": 121.5422471
-      }
+      },
+      "mrt_id": 30
     },
     {
       "id": 76,
-      "name": "天島咖啡TenshimaCafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 4,
@@ -1703,7 +1886,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:00-22:00 （週一公休）",
-      "mrt": "景美",
+      "mrt": "景美站",
       "address": "台北市文山區羅斯福路六段311號",
       "timelimit": false,
       "plug": true,
@@ -1714,57 +1897,63 @@ const shops = [
       "pos": {
       "lat": 24.9940195,
       "lon": 121.541397
-      }
+      },
+      "mrt_id": 30
     },
     {
       "id": 77,
-      "name": "咖啡走廊COFFEE HALL 敦南店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
-      "coffee": ,
+      "coffee": undefined,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 3,
       "time": "08:30 - 22:00\r\n",
-      "mrt": "科技大樓",
+      "mrt": "科技大樓站",
       "address": "台北市大安區敦化南路二段140號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/%E5%92%96%E5%95%A1%E8%B5%B0%E5%BB%8ACOFFEE-HALL-144448302252927/?ref=page_internal",
       "pos": {
       "lat": 25.025703,
       "lon": 121.548291
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 78,
-      "name": "布朗奇咖啡 敦南店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
-      "coffee": ,
+      "coffee": undefined,
       "price": 5,
       "decoration": 4,
       "distance_mrt": 3,
       "time": "週一到週五:07:00-20:00 六日07:30-18:00",
-      "mrt": "科技大樓",
+      "mrt": "科技大樓站",
       "address": "台北市大安區敦化南路二段182號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "平價，燈光明亮，通常有座位不會太吵；餐點普通但價位也相對親切些，可以吃飽。(類似比較不吵的上島咖啡) 咖啡品質因本人不喝咖啡待其他人補充。",
       "web": "https://www.facebook.com/BrunchCoffeeDunnan/",
       "pos": {
       "lat": 25.0235759,
       "lon": 121.5483433
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 79,
-      "name": "Workis工作是",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4.5,
       "coffee": 5,
@@ -1772,48 +1961,57 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "09:00-19:00 (通常是這樣啦，填個訂位表單比較好)",
-      "mrt": "科技大樓",
+      "mrt": "科技大樓站",
       "address": "台北市大安區復興南路二段337巷6弄2號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "有貓有咖啡但更接近工作室的空間,捷運站超近,網速穩定,出入成員很硬",
       "web": "https://www.facebook.com/workisstudio1",
       "pos": {
       "lat": 25.0234855,
       "lon": 121.5438662
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 80,
-      "name": "自然醒咖啡公寓",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 4.5,
-      "mrt": "科技大樓",
+      "time": undefined,
+      "mrt": "科技大樓站",
       "address": "台北市大安區和平東路二段157號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/WakinUpCafeApartment/",
       "pos": {
       "lat": 25.0253255,
       "lon": 121.5413877
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 81,
-      "name": "Stoppage Time 補時",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4.5,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 4.5,
-      "mrt": "科技大樓",
+      "time": undefined,
+      "mrt": "科技大樓站",
       "address": "台北市大安區和平東路二段96巷15弄30號一樓",
       "timelimit": false,
       "plug": true,
@@ -1824,41 +2022,48 @@ const shops = [
       "pos": {
       "lat": 25.0233245,
       "lon": 121.5423174
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 82,
-      "name": "Angle cafe'",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 3.5,
-      "mrt": "科技大樓",
+      "time": undefined,
+      "mrt": "科技大樓站",
       "address": "台北市大安區瑞安街206號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
       "recommender": "AJ",
+      "comment": undefined,
       "web": "https://www.facebook.com/AngleCafe/",
       "pos": {
       "lat": 25.0281523,
       "lon": 121.5406656
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 83,
-      "name": "水牛書店",
-      "wifi_stable": 2.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
       "price": 4,
       "decoration": 4.5,
       "distance_mrt": 3,
-      "mrt": "科技大樓",
+      "time": undefined,
+      "mrt": "科技大樓站",
       "address": "台北市大安區瑞安街222巷2號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "Ethen",
@@ -1867,12 +2072,13 @@ const shops = [
       "pos": {
       "lat": 25.0275203,
       "lon": 121.5399706
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 84,
-      "name": "未央咖啡店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -1880,7 +2086,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "12:30PM~01:00",
-      "mrt": "科技大樓",
+      "mrt": "科技大樓站",
       "address": "台北市大安區四維路208巷10號",
       "timelimit": false,
       "plug": true,
@@ -1891,112 +2097,138 @@ const shops = [
       "pos": {
       "lat": 25.0262582,
       "lon": 121.5474146
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 85,
-      "name": "22Caf? - 22號咖啡館",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
       "time": "08:00-18:00 週二公休",
-      "mrt": "科技大樓",
+      "mrt": "科技大樓站",
       "address": "台北市大安區四維路216巷22號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
       "comment": "平常人不多應該不吵。",
       "web": "https://www.facebook.com/22cafeBrunch/",
       "pos": {
       "lat": 25.0259094,
       "lon": 121.5469349
-      }
+      },
+      "mrt_id": 7
     },
     {
       "id": 86,
-      "name": "917 好事咖啡創意廚房",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
-      "mrt": "六張犁",
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
+      "time": undefined,
+      "mrt": "六張犁站",
       "address": "台北市大安區安居街8巷19號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/HowsCoffee/",
       "pos": {
       "lat": 25.021855,
       "lon": 121.554532
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 87,
-      "name": "老木咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
-      "quiet": ,
+      "quiet": undefined,
       "coffee": 4,
       "price": 3.5,
       "decoration": 5,
-      "distance_mrt": ,
-      "mrt": "六張犁",
+      "distance_mrt": undefined,
+      "time": undefined,
+      "mrt": "六張犁站",
       "address": "台北市大安區和平東路三段119巷11號",
       "timelimit": false,
+      "plug": undefined,
+      "standplace": undefined,
       "recommender": "Summer",
       "comment": "貓咪很可愛會飛來飛去XD\"",
       "web": "https://www.facebook.com/cafepachamama/?fref=ts",
       "pos": {
       "lat": 25.0256151,
       "lon": 121.5516229
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 88,
-      "name": "統將咖啡和平店",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
       "time": "12:00～19:00",
-      "mrt": "六張犁",
+      "mrt": "六張犁站",
       "address": "台北市大安區和平東路三段228巷20號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "要在家自己動手沖咖啡可以去店裡看看",
+      "web": undefined,
       "pos": {
       "lat": 25.0219268,
       "lon": 121.5541292
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 89,
-      "name": "苔毛",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 4,
       "price": 3,
       "decoration": 4.5,
       "distance_mrt": 4.5,
-      "mrt": "六張犁",
+      "time": undefined,
+      "mrt": "六張犁站",
       "address": "台北市大安區嘉興街345號",
+      "timelimit": undefined,
       "plug": true,
+      "standplace": undefined,
       "recommender": "aphasia",
       "comment": "空間寬敞明亮，桌面高度適合工作。不過沒在假日去過不確定安靜程度 & 好不好卡位。(假日通常人很多)，店員態度高傲",
       "web": "https://www.facebook.com/taimocafe/",
       "pos": {
       "lat": 25.0221796,
       "lon": 121.5524253
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 90,
-      "name": "泰比咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -2004,7 +2236,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "13:00 - 23:00 週一休",
-      "mrt": "六張犁",
+      "mrt": "六張犁站",
       "address": "台北市大安區樂業街68號",
       "timelimit": false,
       "plug": false,
@@ -2015,12 +2247,13 @@ const shops = [
       "pos": {
       "lat": 25.0220443,
       "lon": 121.5505098
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 91,
-      "name": "Vinyl Decision 黑膠咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -2028,22 +2261,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一至週五 14:00-22:00 六日12:00-22:00",
-      "mrt": "六張犁",
+      "mrt": "六張犁站",
       "address": "台北市信義區崇德街38巷6號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
       "comment": "擁有大量的黑膠唱片，可自由聆聽，爵士和搖滾為主，音響特佳，可久坐。",
       "web": "https://www.facebook.com/VinylDecision/",
       "pos": {
       "lat": 25.023994,
       "lon": 121.553747
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 92,
-      "name": "PEG配個咖啡吧",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -2056,47 +2291,54 @@ const shops = [
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "店內有大量海賊王布偶及海報，海賊風格咖啡店。手沖為主力，甜點極佳。僅平日供應鬆餅，假日無熱食。低消一杯飲品。",
       "web": "https://www.facebook.com/PEGCoffee/",
       "pos": {
       "lat": 25.023284,
       "lon": 121.5546763
-      }
+      },
+      "mrt_id": 8
     },
     {
       "id": 93,
-      "name": "好杯咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
-      "coffee": ,
+      "coffee": undefined,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
       "time": "1000~2100 周一公休",
-      "mrt": "民權西路",
+      "mrt": "民權西路站",
       "address": "台北市大同區昌吉街22號",
       "timelimit": false,
       "plug": false,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "一、二樓感覺差蠻多的，假日會稍微比較吵鬧／鄰近宿舍區、台科大，中午開門，低消80可以坐一整天，隨處有插座(by Pam) 要收10%服務費這點不推",
       "web": "https://www.facebook.com/cafeFalseworries/",
       "pos": {
       "lat": 25.0657545,
       "lon": 121.5173351
-      }
+      },
+      "mrt_id": 45
     },
     {
       "id": 94,
-      "name": "cafe wien",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 5,
-      "mrt": "民權西路",
+      "time": undefined,
+      "mrt": "民權西路站",
       "address": "台北市中山區撫順街41巷3號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "阿川",
@@ -2105,12 +2347,13 @@ const shops = [
       "pos": {
       "lat": 25.0642135,
       "lon": 121.5193488
-      }
+      },
+      "mrt_id": 45
     },
     {
       "id": 95,
-      "name": "G'day Cafe 好日咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4.5,
@@ -2118,7 +2361,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "09:00-20:00",
-      "mrt": "民權西路",
+      "mrt": "民權西路站",
       "address": "台北市中山區撫順街9號",
       "timelimit": false,
       "plug": false,
@@ -2129,12 +2372,13 @@ const shops = [
       "pos": {
       "lat": 25.063796,
       "lon": 121.521396
-      }
+      },
+      "mrt_id": 45
     },
     {
       "id": 96,
-      "name": "Full of beans充滿豆豆咖啡館-台北藝文空間",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -2142,22 +2386,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "12:00-18:00 週一公休",
-      "mrt": "南京復興",
+      "mrt": "南京復興站",
       "address": "台北市松山區八德路二段346巷5弄25號1樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "直火烘焙,自家手做可遇不可求甜點,手工披薩,常備10多種手沖單品,販售咖啡豆與濾掛咖啡和器材,場地出租與咖啡課程",
       "web": "https://www.facebook.com/FOBcafe.gallery/",
       "pos": {
       "lat": 25.047269,
       "lon": 121.545586
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 97,
-      "name": "BooGoo布咕Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -2165,7 +2411,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "週一-週五: 12:00-20:00 週六-週日: 11:00-20:00",
-      "mrt": "南京復興",
+      "mrt": "南京復興站",
       "address": "台北市松山區敦化北路120巷19號",
       "timelimit": false,
       "plug": true,
@@ -2176,12 +2422,13 @@ const shops = [
       "pos": {
       "lat": 25.053824,
       "lon": 121.547082
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 98,
-      "name": "果子咖啡 Gozcafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -2189,42 +2436,49 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 3.5,
       "time": "週一到週五 07:30-23:00\r\n週末及國定假日: 09:00-21:00",
-      "mrt": "南京復興",
+      "mrt": "南京復興站",
       "address": "台北市松山區民生東路三段140巷11號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "下午2點後有低消100元，其餘時段1杯飲料，不限時間，可做包場聚會，文湖線南京復興站7號出口下去後直走慶城街轉興安街，錢都涮涮鍋旁。",
       "web": "https://www.facebook.com/gozcafefans/",
       "pos": {
       "lat": 25.0561486,
       "lon": 121.5467783
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 99,
-      "name": "公園咖啡 Le Park",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 5,
-      "mrt": "南京復興",
+      "time": undefined,
+      "mrt": "南京復興站",
       "address": "台北市中山區遼寧街146號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.0537289,
       "lon": 121.541937
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 100,
-      "name": "Greeny Cafe 菜鳥咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -2232,22 +2486,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "12:00 - 21:00 週日公休",
-      "mrt": "南京復興",
+      "mrt": "南京復興站",
       "address": "台北市中山區南京東路3段109巷1號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "提供蔬食料理、自製手做甜點，蛋糕好好吃~，環境舒適安靜，適合soho工作者",
       "web": "https://www.facebook.com/greenycafe/",
       "pos": {
       "lat": 25.0523798,
       "lon": 121.5398303
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 101,
-      "name": "Seed Bureau Kafe 種子咖啡",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -2255,28 +2511,32 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "11:00-19:00 周日公休",
-      "mrt": "南京復興",
+      "mrt": "南京復興站",
       "address": "台北市松山區南京東路三段338巷3號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "自製甜點好吃!!每個位置都有插座。",
+      "web": undefined,
       "pos": {
       "lat": 25.0512196,
       "lon": 121.5476596
-      }
+      },
+      "mrt_id": 5
     },
     {
       "id": 102,
-      "name": "由你咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3.5,
       "coffee": 4,
       "price": 3.5,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "南京三民",
+      "time": undefined,
+      "mrt": "南京三民站",
       "address": "台北市松山區八德路四段245巷52弄29號",
       "timelimit": false,
       "plug": true,
@@ -2287,19 +2547,21 @@ const shops = [
       "pos": {
       "lat": 25.0504476,
       "lon": 121.5627321
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 103,
-      "name": "小樽手作咖啡廳",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
       "price": 3.5,
       "decoration": 3.5,
       "distance_mrt": 4,
-      "mrt": "南京三民",
+      "time": undefined,
+      "mrt": "南京三民站",
       "address": "台北市松山區東興路23號",
       "timelimit": false,
       "plug": true,
@@ -2310,12 +2572,13 @@ const shops = [
       "pos": {
       "lat": 25.0497083,
       "lon": 121.5656223
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 104,
-      "name": "有心咖啡 A Thoughtful Place",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -2323,21 +2586,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4. 5 ,
       "time": "11:00-22:00 週日公休",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區光復北路103巷38號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/thoughtfulplace/",
       "pos": {
       "lat": 25.0507753,
       "lon": 121.5597548
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 105,
-      "name": "有心咖啡A Thoughtful Place",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4,
       "coffee": 4.5,
@@ -2345,22 +2611,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:00-22:00 (週日公休)",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區光復北路103巷38號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "周日公休。據說店內簡餐使用有機小農作物，挑嘴朋友表示好吃。冰箱有各種MIT啤酒！",
       "web": "https://www.facebook.com/thoughtfulplace/",
       "pos": {
       "lat": 25.0507753,
       "lon": 121.5597548
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 106,
-      "name": "一文咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -2368,22 +2636,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "11:30~21:00\r\n周一公休",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區光復北路120巷18號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
       "recommender": "Horace Yang",
       "comment": "非常適合工作讀書，每周六日還會安排表演活動!!!",
+      "web": undefined,
       "pos": {
       "lat": 25.0508935,
       "lon": 121.5570353
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 107,
-      "name": "虎屋咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -2391,8 +2661,10 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3,
       "time": "11:00-21:00",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區民生東路五段36巷8弄20號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
       "recommender": "Chiara Kung",
       "comment": "低消有點難達成，不能只點一杯飲料，假日會有小孩",
@@ -2400,12 +2672,13 @@ const shops = [
       "pos": {
       "lat": 25.0569714,
       "lon": 121.5582826
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 108,
-      "name": "PK Caff?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 2,
       "quiet": 3,
       "coffee": 5,
@@ -2413,21 +2686,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "07:30-17:00 週三公休",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區南京東路五段123巷8弄2號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
       "comment": "咖啡、餐點非常推薦。空間不大，適合個人或兩人同行。使用插座酌收$10，不限時間。",
       "web": "https://www.facebook.com/pkcaffe/",
       "pos": {
       "lat": 25.0534105,
       "lon": 121.5609513
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 109,
-      "name": "紅雪啡啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -2435,7 +2711,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "09:00–01:00",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區南京東路五段167號",
       "timelimit": false,
       "plug": true,
@@ -2446,12 +2722,13 @@ const shops = [
       "pos": {
       "lat": 25.0516672,
       "lon": 121.5634692
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 110,
-      "name": "樂樂咖啡",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4.5,
@@ -2459,7 +2736,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00-21:00",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區延壽街129號",
       "timelimit": false,
       "plug": true,
@@ -2470,12 +2747,13 @@ const shops = [
       "pos": {
       "lat": 25.0570398,
       "lon": 121.5643211
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 111,
-      "name": "左先生咖啡Dousun Cafe'",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4,
@@ -2483,8 +2761,9 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "14:30-03:00 (週二~三公休）",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區延壽街139號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "Summer",
@@ -2493,12 +2772,13 @@ const shops = [
       "pos": {
       "lat": 25.0569735,
       "lon": 121.5639483
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 112,
-      "name": "All Day Roasting Company",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4,
@@ -2506,7 +2786,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3,
       "time": "10:00-23:00",
-      "mrt": "南京三民",
+      "mrt": "南京三民站",
       "address": "台北市松山區延壽街329號",
       "timelimit": false,
       "plug": true,
@@ -2517,12 +2797,13 @@ const shops = [
       "pos": {
       "lat": 25.056827,
       "lon": 121.560257
-      }
+      },
+      "mrt_id": 107
     },
     {
       "id": 113,
-      "name": "ERC Cafe 中和店 阿達阿永咖啡廳",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -2530,18 +2811,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "10:00 - 22:00",
-      "mrt": "南勢角",
+      "mrt": "南勢角站",
       "address": "新北市中和區興南路一段106號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/Dayongcafe/",
       "pos": {
       "lat": 24.9886598,
       "lon": 121.5095207
-      }
+      },
+      "mrt_id": 39
     },
     {
       "id": 114,
-      "name": "Coffee Sweet",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 5,
@@ -2549,98 +2836,124 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 3,
       "time": "09:30~18:30 六15:30~18:30 週日休息",
-      "mrt": "善導寺",
+      "mrt": "善導寺站",
       "address": "台北市中山區中山北路一段33巷20弄3號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
       "recommender": "Vicky2395",
       "comment": "咖啡水準高，老闆煮咖啡的水準相當高。Coffee Sweet是咖啡人的朝聖地，這樣講夠清楚了吧。",
+      "web": undefined,
       "pos": {
       "lat": 25.0482351,
       "lon": 121.5221926
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 115,
-      "name": "慢動作咖啡館",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 5,
-      "price": ,
+      "price": undefined,
       "decoration": 4,
       "distance_mrt": 3,
-      "mrt": "善導寺",
+      "time": undefined,
+      "mrt": "善導寺站",
       "address": "台北市中山區中山北路一段33巷20弄6號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/DoucementCoffee/",
       "pos": {
       "lat": 25.0484838,
       "lon": 121.5219379
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 116,
-      "name": "TAV Cafe 藝術村餐坊",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "善導寺",
+      "time": undefined,
+      "mrt": "善導寺站",
       "address": "台北市中正區北平東路7號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": true,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/TAV-Cafe-%E8%97%9D%E8%A1%93%E6%9D%91%E9%A4%90%E5%9D%8A-322439244446154/",
       "pos": {
       "lat": 25.0468495,
       "lon": 121.5223252
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 117,
-      "name": "Beccafico",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
-      "mrt": "善導寺",
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
+      "time": undefined,
+      "mrt": "善導寺站",
       "address": "台北市中正區杭州南路一段11巷4號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/beccafico2015/",
       "pos": {
       "lat": 25.0431781,
       "lon": 121.527247
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 118,
-      "name": "慕哲咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
-      "decoration": ,
+      "decoration": undefined,
       "distance_mrt": 5,
-      "mrt": "善導寺",
+      "time": undefined,
+      "mrt": "善導寺站",
       "address": "台北市中正區紹興北街3號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
       "recommender": "Summer",
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.0447417,
       "lon": 121.525335
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 119,
-      "name": "咖啡實驗室",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 5,
@@ -2648,7 +2961,7 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 3.5,
       "time": "11:00 - 20:00 五六11:00 - 21:30",
-      "mrt": "善導寺",
+      "mrt": "善導寺站",
       "address": "台北市中正區忠孝東路二段64巷6號",
       "timelimit": false,
       "plug": false,
@@ -2659,12 +2972,13 @@ const shops = [
       "pos": {
       "lat": 25.0429847,
       "lon": 121.5285806
-      }
+      },
+      "mrt_id": 73
     },
     {
       "id": 120,
-      "name": "士林三號出口咖啡廳",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
@@ -2672,18 +2986,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "11:00 - 20:00 週一休",
-      "mrt": "士林",
+      "mrt": "士林站",
       "address": "台北市士林區福德路31-1號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/Shilinexit3/",
       "pos": {
       "lat": 25.0913666,
       "lon": 121.5238844
-      }
+      },
+      "mrt_id": 48
     },
     {
       "id": 121,
-      "name": "流浪觀點",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3,
       "coffee": 5,
@@ -2691,7 +3011,7 @@ const shops = [
       "decoration": 2,
       "distance_mrt": 5,
       "time": "12:00-24:00",
-      "mrt": "士林",
+      "mrt": "士林站",
       "address": "台北市士林區福壽街13號1樓",
       "timelimit": false,
       "plug": true,
@@ -2702,19 +3022,21 @@ const shops = [
       "pos": {
       "lat": 25.0958475,
       "lon": 121.5255818
-      }
+      },
+      "mrt_id": 48
     },
     {
       "id": 122,
-      "name": "Orange看電車咖啡館",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "士林",
+      "time": undefined,
+      "mrt": "士林站",
       "address": "台北市士林區文林路302號",
       "timelimit": false,
       "plug": true,
@@ -2725,12 +3047,13 @@ const shops = [
       "pos": {
       "lat": 25.0919568,
       "lon": 121.5263636
-      }
+      },
+      "mrt_id": 48
     },
     {
       "id": 123,
-      "name": "HOK-House of Kuo 郭元益的家",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -2738,7 +3061,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "08:00-21:00",
-      "mrt": "士林",
+      "mrt": "士林站",
       "address": "台北市士林區文林路526號",
       "timelimit": false,
       "plug": true,
@@ -2749,12 +3072,13 @@ const shops = [
       "pos": {
       "lat": 25.0971333,
       "lon": 121.5241601
-      }
+      },
+      "mrt_id": 48
     },
     {
       "id": 124,
-      "name": "FalseT ONLY CAFE",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -2762,44 +3086,49 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:30-21:30",
-      "mrt": "市政府",
+      "mrt": "市政府站",
       "address": "台北市信義區永吉路30巷158弄21號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "單品咖啡相當有水準，義式咖啡更是不在話下，重點是寬大的座位，以及舒適開放的環境，很適合辦公作業談正事談旅遊事，店內的燻雞鬆餅更是常客的最愛",
       "web": "https://www.facebook.com/Falsetonlycafe/",
       "pos": {
       "lat": 25.0424939,
       "lon": 121.567884
-      }
+      },
+      "mrt_id": 77
     },
     {
       "id": 125,
-      "name": "味旅 vojago",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "市政府",
+      "time": undefined,
+      "mrt": "市政府站",
       "address": "台北市信義區永吉路30巷158弄9號",
       "timelimit": true,
       "plug": false,
       "standplace": false,
       "recommender": "Kenzy",
+      "comment": undefined,
       "web": "https://www.facebook.com/vojago.coffee/",
       "pos": {
       "lat": 25.042488,
       "lon": 121.5683339
-      }
+      },
+      "mrt_id": 77
     },
     {
       "id": 126,
-      "name": "巢 nido",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 1,
       "quiet": 5,
       "coffee": 5,
@@ -2807,21 +3136,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4,
       "time": "大約 2pm-12am 公休日：每月6、16、26日及不定休",
-      "mrt": "市政府",
+      "mrt": "市政府站",
       "address": "台北市信義區忠孝東路五段183號2樓",
+      "timelimit": undefined,
       "plug": true,
+      "standplace": undefined,
       "recommender": "LeeoLee",
       "comment": "這裡空間不大，座位不多，為了減少大家白跑一趟的情況，這裡可以訂位，但目前訂位以來過這裡的朋友為主，若你還沒來過，訂位以2人為限",
       "web": "https://www.facebook.com/nidofordreamers/?ref=page_internal",
       "pos": {
       "lat": 25.041238,
       "lon": 121.569169
-      }
+      },
+      "mrt_id": 77
     },
     {
       "id": 127,
-      "name": "Miao米亞歐隨義小廚",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
       "coffee": 4.5,
@@ -2829,7 +3161,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4.5,
       "time": "11:30-21:00 (週一公休)",
-      "mrt": "市政府",
+      "mrt": "市政府站",
       "address": "台北市信義區忠孝東路五段71巷32號",
       "timelimit": true,
       "plug": true,
@@ -2840,12 +3172,13 @@ const shops = [
       "pos": {
       "lat": 25.0408333,
       "lon": 121.5689755
-      }
+      },
+      "mrt_id": 77
     },
     {
       "id": 128,
-      "name": "L'all?e 小徑咖啡",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
@@ -2853,7 +3186,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "11:00~19:30",
-      "mrt": "雙連",
+      "mrt": "雙連站",
       "address": "台北市中山區中山北路二段96巷28號",
       "timelimit": true,
       "plug": false,
@@ -2864,12 +3197,13 @@ const shops = [
       "pos": {
       "lat": 25.0539039,
       "lon": 121.5223
-      }
+      },
+      "mrt_id": 44
     },
     {
       "id": 129,
-      "name": "露西亞咖啡 Cafe Rossiya",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -2877,7 +3211,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "11:30-21:30 周六日休",
-      "mrt": "松江南京",
+      "mrt": "松江南京站",
       "address": "台北市中山區南京東路二段124號9F",
       "timelimit": false,
       "plug": true,
@@ -2888,34 +3222,38 @@ const shops = [
       "pos": {
       "lat": 25.0517453,
       "lon": 121.5333468
-      }
+      },
+      "mrt_id": 85
     },
     {
       "id": 130,
-      "name": "沐鴉咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 4,
       "price": 3.5,
       "decoration": 4,
       "distance_mrt": 3.5,
-      "mrt": "松江南京",
+      "time": undefined,
+      "mrt": "松江南京站",
       "address": "台北市中山區伊通街19巷8號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/mooyacafe/",
       "pos": {
       "lat": 25.0489014,
       "lon": 121.5349542
-      }
+      },
+      "mrt_id": 85
     },
     {
       "id": 131,
-      "name": "里山咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3,
       "coffee": 4.5,
@@ -2923,7 +3261,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:00-2100",
-      "mrt": "松江南京",
+      "mrt": "松江南京站",
       "address": "台北市中山區伊通街66巷17號",
       "timelimit": true,
       "plug": true,
@@ -2934,19 +3272,21 @@ const shops = [
       "pos": {
       "lat": 25.0526674,
       "lon": 121.5339119
-      }
+      },
+      "mrt_id": 85
     },
     {
       "id": 132,
-      "name": "儲房咖啡館",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4.5,
       "coffee": 5,
       "price": 3.5,
       "decoration": 5,
       "distance_mrt": 4,
-      "mrt": "松江南京",
+      "time": undefined,
+      "mrt": "松江南京站",
       "address": "台北市中山區建國北路一段67巷29號",
       "timelimit": false,
       "plug": true,
@@ -2957,12 +3297,13 @@ const shops = [
       "pos": {
       "lat": 25.0509697,
       "lon": 121.5382872
-      }
+      },
+      "mrt_id": 85
     },
     {
       "id": 133,
-      "name": "CO77EE",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -2970,7 +3311,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "0800~1700 (周日休)",
-      "mrt": "松山",
+      "mrt": "松山站",
       "address": "台北市南港區市民大道七段7號",
       "timelimit": false,
       "plug": true,
@@ -2981,12 +3322,13 @@ const shops = [
       "pos": {
       "lat": 25.0496432,
       "lon": 121.5809608
-      }
+      },
+      "mrt_id": 108
     },
     {
       "id": 134,
-      "name": "Goodmans Songshan",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -2994,22 +3336,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "11：00-19：00 (週末12：00-19：00，週三公休)",
-      "mrt": "松山",
+      "mrt": "松山站",
       "address": "台北市南港區市民大道七段8號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
       "recommender": "2723T",
+      "comment": undefined,
       "web": "https://www.facebook.com/Goodmanssongshan/",
       "pos": {
       "lat": 25.0492807,
       "lon": 121.5805022
-      }
+      },
+      "mrt_id": 108
     },
     {
       "id": 135,
-      "name": "meromero 美蘿咖啡館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -3017,7 +3361,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "10:00 - 23:00",
-      "mrt": "松山機場",
+      "mrt": "松山機場站",
       "address": "台北市松山區民生東路四段55巷30號",
       "timelimit": false,
       "plug": true,
@@ -3028,12 +3372,13 @@ const shops = [
       "pos": {
       "lat": 25.058693,
       "lon": 121.550412
-      }
+      },
+      "mrt_id": 3
     },
     {
       "id": 136,
-      "name": "勺子雜貨咖啡 Spoongoods & cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -3041,22 +3386,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一~六 10:00-21:00 週日10:00-18:00",
-      "mrt": "松山機場",
+      "mrt": "松山機場站",
       "address": "台北市松山區民生東路四段97巷4弄2-1號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "是一家有很多現做餐點的咖啡店，有早午餐、三明治、義大利麵、燉飯、鬆餅、手工蛋糕，咖啡好喝，環境安靜，還有賣很多歐美日的雜貨，店內不大但無限時。",
       "web": "https://www.facebook.com/spoongoods/",
       "pos": {
       "lat": 25.0587769,
       "lon": 121.5522431
-      }
+      },
+      "mrt_id": 3
     },
     {
       "id": 137,
-      "name": "Aroma corner",
-      "wifi_stable": 3,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -3064,7 +3411,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3,
       "time": "10:00-18:00",
-      "mrt": "松山機場",
+      "mrt": "松山機場站",
       "address": "台北市松山區新中街43號",
       "timelimit": false,
       "plug": true,
@@ -3075,12 +3422,13 @@ const shops = [
       "pos": {
       "lat": 25.060516,
       "lon": 121.5602142
-      }
+      },
+      "mrt_id": 3
     },
     {
       "id": 138,
-      "name": "威爾貝克手烘咖啡 吳興店",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 4,
@@ -3088,7 +3436,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "07:30 - 20:00",
-      "mrt": "台北101",
+      "mrt": "台北101/世貿中心站",
       "address": "台北市信義區吳興街52號",
       "timelimit": false,
       "plug": true,
@@ -3099,12 +3447,13 @@ const shops = [
       "pos": {
       "lat": 25.030951,
       "lon": 121.5602816
-      }
+      },
+      "mrt_id": 102
     },
     {
       "id": 139,
-      "name": "Orange days(Welback吳興店)",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 5,
@@ -3112,7 +3461,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3,
       "time": "08:00-20:00",
-      "mrt": "台北102",
+      "mrt": "台北101/世貿中心站",
       "address": "台北市信義區吳興街52號",
       "timelimit": false,
       "plug": true,
@@ -3123,12 +3472,13 @@ const shops = [
       "pos": {
       "lat": 25.030951,
       "lon": 121.5602816
-      }
+      },
+      "mrt_id": 102
     },
     {
       "id": 140,
-      "name": "Woolloomooloo XY",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4.5,
@@ -3136,22 +3486,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "07:30-24:00",
-      "mrt": "台北103",
+      "mrt": "台北101/世貿中心站",
       "address": "台北市信義區信義路四段379號",
       "timelimit": true,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
       "comment": "甜點跟餐點（鹹食、正餐）都超級好吃！但環境有點吵，建議自備耳機。",
       "web": "https://zh-tw.facebook.com/woolloomoolooTaipei/",
       "pos": {
       "lat": 25.0333157,
       "lon": 121.5581353
-      }
+      },
+      "mrt_id": 102
     },
     {
       "id": 141,
-      "name": "Let's meet F2F Caf?",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -3159,7 +3511,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "11:00-23:00",
-      "mrt": "台北104",
+      "mrt": "台北101/世貿中心站",
       "address": "台北市信義區莊敬路391巷11弄3號",
       "timelimit": false,
       "plug": true,
@@ -3170,12 +3522,13 @@ const shops = [
       "pos": {
       "lat": 25.028556,
       "lon": 121.56565
-      }
+      },
+      "mrt_id": 102
     },
     {
       "id": 142,
-      "name": "海倫咖啡",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -3183,21 +3536,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "07:30 - 22:00",
-      "mrt": "台北車站",
+      "mrt": "臺北車站",
       "address": "台北市中正區館前路42號1樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/HELEN.COFFEE.ROASTER/",
       "pos": {
       "lat": 25.0444623,
       "lon": 121.5148688
-      }
+      },
+      "mrt_id": 42
     },
     {
       "id": 143,
-      "name": "奧蘿茉咖非北車店OROMO CAFE",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 2.5,
       "quiet": 2.5,
       "coffee": 3.5,
@@ -3205,7 +3561,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00-22:00",
-      "mrt": "台北車站",
+      "mrt": "臺北車站",
       "address": "台北市中正區南陽街26號",
       "timelimit": false,
       "plug": true,
@@ -3216,12 +3572,13 @@ const shops = [
       "pos": {
       "lat": 25.0443856,
       "lon": 121.51601
-      }
+      },
+      "mrt_id": 42
     },
     {
       "id": 144,
-      "name": "Falsetch咖啡 站前店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -3229,30 +3586,34 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "07:30-22:00",
-      "mrt": "台北車站",
+      "mrt": "臺北車站",
       "address": "台北市中正區信陽街6號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "咖啡廳設有200座位、投影螢幕,投影機可使用,在北車少數可以包場的好地方,咖啡跟餐點都不錯,可以帶寵物的好店,提供真正的好咖啡 \r\n自家烘焙的精品咖啡豆 \r\n舒適自在的溫暖環境 \r\n提供免費電源以及WI-FI環境超佳",
       "web": "https://www.facebook.com/FalseTCHfrontstation",
       "pos": {
       "lat": 25.0445166,
       "lon": 121.5164008
-      }
+      },
+      "mrt_id": 42
     },
     {
       "id": 145,
-      "name": "FIX coffee & some more",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 3.5,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 3,
-      "mrt": "台北小巨蛋",
+      "time": undefined,
+      "mrt": "台北小巨蛋站",
       "address": "台北市松山區八德路三段8巷21號",
+      "timelimit": undefined,
       "plug": false,
       "standplace": false,
       "recommender": "AJ",
@@ -3261,12 +3622,13 @@ const shops = [
       "pos": {
       "lat": 25.0468272,
       "lon": 121.5497677
-      }
+      },
+      "mrt_id": 106
     },
     {
       "id": 146,
-      "name": "小破爛 Caf? Junkies",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -3274,8 +3636,9 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "07:30-20:00",
-      "mrt": "台北小巨蛋",
+      "mrt": "台北小巨蛋站",
       "address": "台北市松山區健康路9號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
@@ -3284,12 +3647,13 @@ const shops = [
       "pos": {
       "lat": 25.0530501,
       "lon": 121.5524683
-      }
+      },
+      "mrt_id": 106
     },
     {
       "id": 147,
-      "name": "Remember Me_記得我．Caf?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
       "coffee": 4,
@@ -3297,7 +3661,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "星期二至六12:00-02:00 星期日、一12:00-22:30",
-      "mrt": "台北小巨蛋",
+      "mrt": "台北小巨蛋站",
       "address": "台北市松山區南京東路四段133巷4弄16號",
       "timelimit": false,
       "plug": true,
@@ -3308,12 +3672,13 @@ const shops = [
       "pos": {
       "lat": 25.0523838,
       "lon": 121.5545535
-      }
+      },
+      "mrt_id": 106
     },
     {
       "id": 148,
-      "name": "民生工寓 coffee essential",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 5,
       "coffee": 4,
@@ -3321,7 +3686,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3,
       "time": "12:00 - 22:00 (六日 10:00 - 22:00)",
-      "mrt": "台北小巨蛋",
+      "mrt": "台北小巨蛋站",
       "address": "台北市松山區民生東路四段56巷1弄3號",
       "timelimit": false,
       "plug": true,
@@ -3332,12 +3697,13 @@ const shops = [
       "pos": {
       "lat": 25.0576079,
       "lon": 121.551816
-      }
+      },
+      "mrt_id": 106
     },
     {
       "id": 149,
-      "name": "Bean There Cafe 自家烘焙館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -3345,7 +3711,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "平日7:30-20:00 週末9:00-19:00",
-      "mrt": "台大醫院",
+      "mrt": "臺大醫院站",
       "address": "台北市中正區重慶南路一段101號",
       "timelimit": false,
       "plug": false,
@@ -3356,32 +3722,38 @@ const shops = [
       "pos": {
       "lat": 25.042957,
       "lon": 121.513366
-      }
+      },
+      "mrt_id": 41
     },
     {
       "id": 150,
-      "name": "挑豆院",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
-      "quiet": ,
+      "quiet": undefined,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區羅斯福路三段269巷2-1號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
       "recommender": "Summer",
+      "comment": undefined,
       "web": "https://www.facebook.com/%E6%8C%91%E8%B1%86%E9%99%A2-1645727852330619/?fref=ts",
       "pos": {
       "lat": 25.0190306,
       "lon": 121.5307077
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 151,
-      "name": "半路咖啡halfway cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4,
@@ -3389,7 +3761,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "12：00-24：00（週二公休）週一下午兩點營業",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區羅斯福路三段269巷51弄9號",
       "timelimit": false,
       "plug": true,
@@ -3400,12 +3772,13 @@ const shops = [
       "pos": {
       "lat": 25.0201376,
       "lon": 121.5316032
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 152,
-      "name": "喜鵲咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4.5,
@@ -3413,49 +3786,57 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "13:00-22:00",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區羅斯福路三段269巷74號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "草莓芭樂牛奶好喝",
+      "web": undefined,
       "pos": {
       "lat": 25.0209198,
       "lon": 121.5316901
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 153,
-      "name": "Aura微光咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
       "coffee": 4,
       "price": 3.5,
       "decoration": 5,
       "distance_mrt": 4,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區羅斯福路三段269巷9號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "Summer",
+      "comment": undefined,
       "web": "https://www.facebook.com/CoffeeAura/?fref=ts",
       "pos": {
       "lat": 25.0194215,
       "lon": 121.5305237
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 154,
-      "name": "城市草倉 C-tea loft",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
       "price": 5,
       "decoration": 5,
       "distance_mrt": 5,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區羅斯福路三段283巷19弄4號",
       "timelimit": false,
       "plug": true,
@@ -3466,19 +3847,21 @@ const shops = [
       "pos": {
       "lat": 25.0194332,
       "lon": 121.5314772
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 155,
-      "name": "避世所",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 2.5,
       "coffee": 4,
       "price": 4,
       "decoration": 4.5,
       "distance_mrt": 3,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區師大路49巷3號2樓",
       "timelimit": false,
       "plug": false,
@@ -3489,12 +3872,13 @@ const shops = [
       "pos": {
       "lat": 25.0243007,
       "lon": 121.5287648
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 156,
-      "name": "欒樹下書房咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 4,
@@ -3502,63 +3886,74 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "10:30-20:30(21:30)",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街24號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "Johnny Jiang",
       "comment": "英式咖啡館氣氛，音樂與餐飲俱優。平日比較安靜",
+      "web": undefined,
       "pos": {
       "lat": 25.023319,
       "lon": 121.533193
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 157,
-      "name": "統將咖啡溫州店",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
       "time": "周一到周六 10:00-20:00 周日12:00~20:30",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街74巷12號1樓",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
       "comment": "要在家自己動手沖咖啡可以去店裡看看",
       "web": "https://m.facebook.com/統將精選咖啡-163647123670428/",
       "pos": {
       "lat": 25.0197867,
       "lon": 121.5319102
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 158,
-      "name": "餘波未了，豆花一堯",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4,
       "coffee": 4,
       "price": 3.5,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市中正區羅斯福路三段128巷9號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/CCCC.coffee/",
       "pos": {
       "lat": 25.0203099,
       "lon": 121.527285
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 159,
-      "name": "逗號慢活空間",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 4,
@@ -3566,29 +3961,32 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "12:00 - 22:00 (公休日參閱粉專)",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市中正區辛亥路一段31號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/%E9%80%97%E8%99%9F%E6%85%A2%E6%B4%BB%E7%A9%BA%E9%96%93-858885907521620/",
       "pos": {
       "lat": 25.019409,
       "lon": 121.5283313
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 160,
-      "name": "路上撿到一隻貓",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
-      "quiet": ,
+      "quiet": undefined,
       "coffee": 4,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 3,
       "time": "13:00~02:00",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街49巷2號",
       "timelimit": false,
       "plug": true,
@@ -3599,19 +3997,21 @@ const shops = [
       "pos": {
       "lat": 25.0213858,
       "lon": 121.533117
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 161,
-      "name": "Apple Museum Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
       "price": 5,
       "decoration": 4,
       "distance_mrt": 3.5,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街74巷3弄5號",
       "timelimit": false,
       "plug": true,
@@ -3622,12 +4022,13 @@ const shops = [
       "pos": {
       "lat": 25.0191952,
       "lon": 121.5321285
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 162,
-      "name": "The Lightened",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -3635,22 +4036,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "一~五12:00-21:30 六日 11:00~21:30",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街74巷5弄3號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "在溫州街的角落，從咖啡、甜點、鹹派到餐點，都使用友善環境與友善生產者的食材，最著名的是直接貿易的咖啡豆和公平貿易的可可粉；店內並且舉辦攝影展與不同活動，討論國際議題。\r\n邀請大家利用消費，改變世界。在空間中，一起討論貧窮、種族、性別、人口販賣和永續等世界上的事。",
       "web": "https://www.facebook.com/thelightened/",
       "pos": {
       "lat": 25.0194175,
       "lon": 121.5318994
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 163,
-      "name": "Picnic 野餐咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 5,
       "coffee": 5,
@@ -3658,7 +4061,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "週一、二、三、六、日 ：13:00-23:30",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區溫州街75號",
       "timelimit": false,
       "plug": true,
@@ -3669,34 +4072,38 @@ const shops = [
       "pos": {
       "lat": 25.0203272,
       "lon": 121.5330046
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 164,
-      "name": "巴黎米咖啡 Cafe 8mm",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 4,
-      "mrt": "台電大樓",
+      "time": undefined,
+      "mrt": "臺電大樓站",
       "address": "台北市大安區新生南路三段60巷1號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
+      "comment": undefined,
       "web": "https://www.facebook.com/Cafe8mm/",
       "pos": {
       "lat": 25.020137,
       "lon": 121.533584
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 165,
-      "name": "人性空間 新生南路店",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3,
       "coffee": 2,
@@ -3704,22 +4111,24 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 2,
       "time": "11:30 - 23:00\r\n",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市大安區新生南路三段60巷7號一樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "以供應場地為主的消費方式；150買座位飲料無限暢飲，不限時可進出，可自帶外食、各種器材的店。氣氛輕鬆學生感很重。店內需脫鞋，有一半是地板座位。另有包廂場地可預約。",
       "web": "https://www.facebook.com/humanspace123/",
       "pos": {
       "lat": 25.0202358,
       "lon": 121.5333688
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 166,
-      "name": "中央公園咖啡館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -3727,7 +4136,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "周二到周六 12:00-22:00\r\n周日 12:00-21:00",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市中正區羅斯福路三段240巷3號",
       "timelimit": false,
       "plug": true,
@@ -3738,12 +4147,13 @@ const shops = [
       "pos": {
       "lat": 25.018081,
       "lon": 121.530254
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 167,
-      "name": "海邊的卡夫卡 Kafka by the Sea",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 2,
@@ -3751,22 +4161,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "週一~週四 11:30-22:30\r\n週五~週日 12:00-24:00",
-      "mrt": "台電大樓",
+      "mrt": "臺電大樓站",
       "address": "台北市中正區羅斯福路三段244巷2號2樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "週六週日晚間會有不插電演出、免費展覽、電影，店中常撥放獨立音樂，選歌有一定的水準",
       "web": "https://www.facebook.com/kafka.republic/",
       "pos": {
       "lat": 25.0171309,
       "lon": 121.5313072
-      }
+      },
+      "mrt_id": 33
     },
     {
       "id": 168,
-      "name": "敲我Ciao.O烘焙工作室",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -3774,22 +4186,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "10:00~20:00 （週一公休）",
-      "mrt": "頭前庄",
+      "mrt": "頭前庄站",
       "address": "新北市新莊區明中街36號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
       "recommender": "MJ",
       "comment": "裝潢讓人感覺舒服，有好吃的蛋糕以及餅乾～還有貝果！！！！店裡的步調是會讓人喜歡的～",
       "web": "https://www.facebook.com/CiaoCiaoO620/",
       "pos": {
       "lat": 25.0395879,
       "lon": 121.4571019
-      }
+      },
+      "mrt_id": 94
     },
     {
       "id": 169,
-      "name": "DreamGo Bar",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -3797,7 +4211,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "週一到週五 08:00-17:00 週六10:00-16:00",
-      "mrt": "萬芳醫院",
+      "mrt": "萬芳醫院站",
       "address": "台北市文山區興隆路三段56號",
       "timelimit": false,
       "plug": true,
@@ -3808,33 +4222,38 @@ const shops = [
       "pos": {
       "lat": 24.9991431,
       "lon": 121.5553747
-      }
+      },
+      "mrt_id": 11
     },
     {
       "id": 170,
-      "name": "joker咖啡",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.5,
       "coffee": 4,
       "price": 4.5,
       "decoration": 4,
       "distance_mrt": 3.5,
-      "mrt": "文德",
+      "time": undefined,
+      "mrt": "文德站",
       "address": "台北市內湖區陽光街275號1F",
       "timelimit": false,
       "plug": false,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/JokeR.taipei/",
       "pos": {
       "lat": 25.074088,
       "lon": 121.580526
-      }
+      },
+      "mrt_id": 19
     },
     {
       "id": 171,
-      "name": "肯達咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4,
@@ -3842,7 +4261,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "10:30-19:00",
-      "mrt": "西湖",
+      "mrt": "西湖站",
       "address": "台北市內湖區環山路一段28巷17號",
       "timelimit": false,
       "plug": true,
@@ -3853,12 +4272,13 @@ const shops = [
       "pos": {
       "lat": 25.0856749,
       "lon": 121.5640068
-      }
+      },
+      "mrt_id": 17
     },
     {
       "id": 172,
-      "name": "湛盧咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -3866,19 +4286,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 4,
       "time": "平日08:30~19:00\r\n週末10:00~21:00",
-      "mrt": "西湖",
+      "mrt": "西湖站",
       "address": "台北市內湖區瑞光路587號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.079599,
       "lon": 121.5678322
-      }
+      },
+      "mrt_id": 17
     },
     {
       "id": 173,
-      "name": "FalseTCH內湖店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 5,
@@ -3886,29 +4311,32 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3.5,
       "time": "07:30-20:00",
-      "mrt": "西湖",
+      "mrt": "西湖站",
       "address": "台北市內湖區內湖路一段411巷10-2號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "【FalseTCH COFFEE 內湖店】自家烘焙莊園級精品咖啡豆，備有義式、聰明濾杯、愛樂壓等沖煮方式，讓您體驗各種美妙的咖啡饗宴。店內提供WIFI、插座，不限時段地享受舒適自在的溫暖環境。",
       "web": "https://www.facebook.com/FalsetchNeiHuYiDian/",
       "pos": {
       "lat": 25.0824808,
       "lon": 121.571028
-      }
+      },
+      "mrt_id": 17
     },
     {
       "id": 174,
-      "name": "i Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "西門",
+      "time": undefined,
+      "mrt": "西門站",
       "address": "台北市萬華區西寧南路82巷2號",
       "timelimit": false,
       "plug": true,
@@ -3919,12 +4347,13 @@ const shops = [
       "pos": {
       "lat": 25.042325,
       "lon": 121.505769
-      }
+      },
+      "mrt_id": 72
     },
     {
       "id": 175,
-      "name": "La Grotta",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 5,
@@ -3932,7 +4361,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "13:00~22:00 週四公休",
-      "mrt": "西門",
+      "mrt": "西門站",
       "address": "台北市中正區中華路一段77號1樓",
       "timelimit": false,
       "plug": false,
@@ -3943,12 +4372,13 @@ const shops = [
       "pos": {
       "lat": 25.038885,
       "lon": 121.5078383
-      }
+      },
+      "mrt_id": 72
     },
     {
       "id": 176,
-      "name": "SUMI CAFE自家烘焙咖啡館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -3956,7 +4386,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "11:00-22:00 周二公休",
-      "mrt": "小碧潭",
+      "mrt": "小碧潭站",
       "address": "新北市新店區中央五街20號",
       "timelimit": false,
       "plug": true,
@@ -3967,12 +4397,13 @@ const shops = [
       "pos": {
       "lat": 24.9742916,
       "lon": 121.5293726
-      }
+      },
+      "mrt_id": 25
     },
     {
       "id": 177,
-      "name": "早安勇士",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3,
       "coffee": 5,
@@ -3980,28 +4411,34 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "07:00 - 18:00 週一公休",
-      "mrt": "新北投",
+      "mrt": "新北投站",
       "address": "台北市北投區育仁路147號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.1364284,
       "lon": 121.500728
-      }
+      },
+      "mrt_id": 55
     },
     {
       "id": 178,
-      "name": "猜咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 3.5,
       "price": 3,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "新埔",
+      "time": undefined,
+      "mrt": "新埔站",
       "address": "新北市板橋區民生路二段234巷11號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "BenBee",
@@ -4010,12 +4447,13 @@ const shops = [
       "pos": {
       "lat": 25.0228711,
       "lon": 121.4686397
-      }
+      },
+      "mrt_id": 69
     },
     {
       "id": 179,
-      "name": "翁林．林Caf'e",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -4023,7 +4461,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00-21:00",
-      "mrt": "新埔",
+      "mrt": "新埔站",
       "address": "新北市板橋區民生路二段234巷24弄6號",
       "timelimit": false,
       "plug": true,
@@ -4034,12 +4472,13 @@ const shops = [
       "pos": {
       "lat": 25.0224557,
       "lon": 121.4700463
-      }
+      },
+      "mrt_id": 69
     },
     {
       "id": 180,
-      "name": "羽兒咖啡館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -4047,7 +4486,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3.5,
       "time": "10:30~21:00 週三公休",
-      "mrt": "新埔",
+      "mrt": "新埔站",
       "address": "新北市板橋區萬板路118號",
       "timelimit": false,
       "plug": true,
@@ -4058,12 +4497,13 @@ const shops = [
       "pos": {
       "lat": 25.0232176,
       "lon": 121.4748901
-      }
+      },
+      "mrt_id": 69
     },
     {
       "id": 181,
-      "name": "翠活輕飲食CheerLife",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -4071,7 +4511,7 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "週一至週五：11:00~21:00\r\n週六日：09:00~21:00",
-      "mrt": "新埔",
+      "mrt": "新埔站",
       "address": "新北市板橋區陽明街72號",
       "timelimit": false,
       "plug": true,
@@ -4082,12 +4522,13 @@ const shops = [
       "pos": {
       "lat": 25.022668,
       "lon": 121.464693
-      }
+      },
+      "mrt_id": 69
     },
     {
       "id": 182,
-      "name": "Mellow Coffee",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -4095,69 +4536,82 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 3,
       "time": "1300-2300 (周二公休)",
-      "mrt": "新埔",
+      "mrt": "新埔站",
       "address": "新北市板橋區莒光路158號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
       "recommender": "Kate",
       "comment": "很安靜，有很多書可看，適合辦公、聊天\r\n海釣船餐廳那條路進去",
+      "web": undefined,
       "pos": {
       "lat": 25.0238866,
       "lon": 121.4739721
-      }
+      },
+      "mrt_id": 69
     },
     {
       "id": 183,
-      "name": "創夢咖啡直銷通路說明中心",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "新店",
+      "time": undefined,
+      "mrt": "新店站",
       "address": "新北市新店區新店路260號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "每桌都有插座，網速驚人，落地窗前有新店溪風景",
       "web": "https://www.facebook.com/DITCAFE",
       "pos": {
       "lat": 24.9577604,
       "lon": 121.5372634
-      }
+      },
+      "mrt_id": 26
     },
     {
       "id": 184,
-      "name": "彼得好咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
       "time": "08:00 - 22:00 周日-21:00",
-      "mrt": "新莊",
+      "mrt": "新莊站",
       "address": "新北市新莊區新泰路109號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/pbcoffee/",
       "pos": {
       "lat": 25.0350754,
       "lon": 121.4488414
-      }
+      },
+      "mrt_id": 93
     },
     {
       "id": 185,
-      "name": "10 square cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4.5,
       "distance_mrt": 5,
-      "mrt": "信義安和",
+      "time": undefined,
+      "mrt": "信義安和站",
       "address": "台北市大安區安和路二段35巷5號",
       "timelimit": false,
       "plug": true,
@@ -4168,12 +4622,13 @@ const shops = [
       "pos": {
       "lat": 25.0318438,
       "lon": 121.5529832
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 186,
-      "name": "James House",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4181,22 +4636,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "13:00 - 24:00",
-      "mrt": "信義安和",
+      "mrt": "信義安和站",
       "address": "台北市大安區安和路一段127巷5號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "Rae",
       "comment": "風格非常古典獨特的咖啡店，隱匿在大安區的小巷，人不多，咖啡和其他飲料的質量上乘，適合辦公、創作、談心。",
+      "web": undefined,
       "pos": {
       "lat": 25.0347605,
       "lon": 121.5529588
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 187,
-      "name": "暮光咖啡／Twilight Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 5,
       "coffee": 5,
@@ -4204,7 +4661,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一至週五 8:00-21:00\r\n週六 8:00-17:00\r\n週日公休",
-      "mrt": "信義安和",
+      "mrt": "信義安和站",
       "address": "台北市大安區仁愛路四段300巷26弄11號",
       "timelimit": false,
       "plug": true,
@@ -4215,12 +4672,13 @@ const shops = [
       "pos": {
       "lat": 25.0359825,
       "lon": 121.5538782
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 188,
-      "name": "Congrats Caf?",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -4228,7 +4686,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "09:00-24:00",
-      "mrt": "信義安和",
+      "mrt": "信義安和站",
       "address": "台北市大安區文昌街47號2樓",
       "timelimit": false,
       "plug": false,
@@ -4239,12 +4697,13 @@ const shops = [
       "pos": {
       "lat": 25.0329036,
       "lon": 121.550537
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 189,
-      "name": "Miuya Cafe 米屋珈琲",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 4,
@@ -4252,9 +4711,10 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "12:30-20:30",
-      "mrt": "信義安和",
+      "mrt": "信義安和站",
       "address": "台北市大安區文昌街49號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": false,
       "recommender": "Eva/Vita",
       "comment": "兩層樓，座位不多，但氛圍很好 / 餐點精緻但量不多280-350，咖啡好喝。假日中午會客滿，需要先預約或2點後再去。氣氛很放鬆，座位舒適，部分座位附檯燈(by Vita",
@@ -4262,12 +4722,13 @@ const shops = [
       "pos": {
       "lat": 25.0329225,
       "lon": 121.5505829
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 190,
-      "name": "咖啡瑪榭通化店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -4275,7 +4736,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3,
       "time": "07:30-22:00(供餐至20:00)",
-      "mrt": "信義安和",
+      "mrt": "信義安和站",
       "address": "台北市大安區通化街145號",
       "timelimit": false,
       "plug": true,
@@ -4286,12 +4747,13 @@ const shops = [
       "pos": {
       "lat": 25.0288103,
       "lon": 121.5539375
-      }
+      },
+      "mrt_id": 103
     },
     {
       "id": 191,
-      "name": "Mr.Brown Cafe' 松江店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 3,
@@ -4299,22 +4761,24 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 5,
       "time": "07:30~22:00",
-      "mrt": "行天宮",
+      "mrt": "行天宮站",
       "address": "台北市中山區松江路332號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "Arther",
       "comment": "有四層樓，座位多！",
+      "web": undefined,
       "pos": {
       "lat": 25.061203,
       "lon": 121.532809
-      }
+      },
+      "mrt_id": 84
     },
     {
       "id": 192,
-      "name": "Dream cafe 未來咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -4322,7 +4786,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:00 - 20:00\r\n",
-      "mrt": "行天宮",
+      "mrt": "行天宮站",
       "address": "台北市中山區松江路362巷22號1樓",
       "timelimit": false,
       "plug": true,
@@ -4333,12 +4797,13 @@ const shops = [
       "pos": {
       "lat": 25.0468583,
       "lon": 121.5327548
-      }
+      },
+      "mrt_id": 84
     },
     {
       "id": 193,
-      "name": "MASS CAFE",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -4346,7 +4811,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "11:00-21:30",
-      "mrt": "亞東醫院",
+      "mrt": "亞東醫院站",
       "address": "新北市板橋區南雅南路二段11-28號",
       "timelimit": false,
       "plug": true,
@@ -4357,12 +4822,13 @@ const shops = [
       "pos": {
       "lat": 25.0016336,
       "lon": 121.4541397
-      }
+      },
+      "mrt_id": 66
     },
     {
       "id": 194,
-      "name": "亞東醫院南棟B1轉角咖啡",
-      "wifi_stable": 1,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 5,
       "coffee": 4,
@@ -4370,7 +4836,7 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 5,
       "time": "週一到週四 08:30-16:00 週五08:30-14:00",
-      "mrt": "亞東醫院",
+      "mrt": "亞東醫院站",
       "address": "新北市板橋區南雅南路二段21號南棟B1",
       "timelimit": false,
       "plug": true,
@@ -4381,12 +4847,13 @@ const shops = [
       "pos": {
       "lat": 24.9972647,
       "lon": 121.4527715
-      }
+      },
+      "mrt_id": 66
     },
     {
       "id": 195,
-      "name": "BPLUS CAFE",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -4394,7 +4861,7 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4,
       "time": "10:00~20:00 （週一公休）",
-      "mrt": "永安市場",
+      "mrt": "永安市場站",
       "address": "新北市永和區安樂路248之3號",
       "timelimit": false,
       "plug": true,
@@ -4405,12 +4872,13 @@ const shops = [
       "pos": {
       "lat": 25.003455,
       "lon": 121.5147558
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 196,
-      "name": "十杯極致手作茶飲",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 1,
       "coffee": 5,
@@ -4418,7 +4886,7 @@ const shops = [
       "decoration": 3,
       "distance_mrt": 2,
       "time": "周二～周六：1100~2300 周一及周日：1100~2100",
-      "mrt": "永安市場",
+      "mrt": "永安市場站",
       "address": "新北市永和區中正路486號",
       "timelimit": false,
       "plug": true,
@@ -4429,55 +4897,63 @@ const shops = [
       "pos": {
       "lat": 25.0038144,
       "lon": 121.5175278
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 197,
-      "name": "HUG Caf'e",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 3.5,
       "distance_mrt": 4,
-      "mrt": "永安市場",
+      "time": undefined,
+      "mrt": "永安市場站",
       "address": "新北市中和區永貞路282巷2號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/hugcafe/",
       "pos": {
       "lat": 25.004066,
       "lon": 121.513333
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 198,
-      "name": "美味的貓之夢",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "永安市場",
+      "time": undefined,
+      "mrt": "永安市場站",
       "address": "新北市中和區中安街178巷2號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": false,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/NekoFalseBistro/",
       "pos": {
       "lat": 24.9995679,
       "lon": 121.510889
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 199,
-      "name": "咖非因館",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -4485,22 +4961,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "08:00-24:00",
-      "mrt": "永安市場",
+      "mrt": "永安市場站",
       "address": "新北市中和區中安街36-38號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "單品咖啡是招牌，是自家烘焙的，拿鐵也相當好喝，鬆餅分量多到不行好吃，每個座位都有插座，環境很不錯舒適",
       "web": "https://www.facebook.com/caffeine.cafe11/",
       "pos": {
       "lat": 25.0030843,
       "lon": 121.5127494
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 200,
-      "name": "咖啡因二館",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -4508,42 +4986,49 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "周一-周五09:00-24:00 例假日08:00-24:00",
-      "mrt": "永安市場",
+      "mrt": "永安市場站",
       "address": "新北市中和區中和路400巷12弄1號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "拿鐵好喝，插座很多，環境不錯，捷運站出來第一個巷子第一家，很近",
       "web": "https://www.facebook.com/caffeine.cafe2/?fref=ts",
       "pos": {
       "lat": 25.0022986,
       "lon": 121.5114905
-      }
+      },
+      "mrt_id": 37
     },
     {
       "id": 201,
-      "name": "深caf",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "永春",
+      "time": undefined,
+      "mrt": "永春站",
       "address": "台北市信義區虎林街143號1樓",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
       "comment": "假日人多，有輕食簡餐，咖啡食物中等，吃早午餐還不錯。",
       "web": "https://www.facebook.com/deepcafedeepcafe/",
       "pos": {
       "lat": 25.039647,
       "lon": 121.576785
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 202,
-      "name": "萃咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4551,22 +5036,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "週一：11:30-17:30\r\n週二三四：10:30-19:30\r\n週五六日：10:00-20:00",
-      "mrt": "永春",
+      "mrt": "永春站",
       "address": "台北市信義區虎林街164巷19-1號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "交通方便，店內安靜，非常適合靜下心來待著享受咖啡香，店內以咖啡飲品為主，亦有提供簡易的輕食、點心。",
       "web": "https://www.facebook.com/%E8%90%83%E5%92%96%E5%95%A1-429144770627227/?fref=ts",
       "pos": {
       "lat": 25.038926,
       "lon": 121.5756303
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 203,
-      "name": "Stone Espressobar",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -4574,21 +5061,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "13:00-22:00 (週二公休)",
-      "mrt": "永春",
+      "mrt": "永春站",
       "address": "台北市信義區松山路304號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "是間小店，二樓有隔間設計，每個隔間有一個插座",
       "web": "https://www.facebook.com/stoneespressobar/",
       "pos": {
       "lat": 25.042701,
       "lon": 121.577611
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 204,
-      "name": "聞山咖啡 永春有貓店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 4,
@@ -4596,22 +5086,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "13:00 - 22:00",
-      "mrt": "永春",
+      "mrt": "永春站",
       "address": "台北市信義區忠孝東路五段372巷27弄73號-1",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "交通方便，插座多，但價錢偏高且咖啡外只有簡單的點心",
       "web": "https://www.facebook.com/wenshancats/?ref=page_internal",
       "pos": {
       "lat": 25.040024,
       "lon": 121.576336
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 205,
-      "name": "吉印",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4.5,
@@ -4619,7 +5111,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "周二公休 14:00-23:45(因為老闆會提醒 改編者choujly)",
-      "mrt": "永春",
+      "mrt": "永春站",
       "address": "台北市信義區忠孝東路五段492巷14號",
       "timelimit": false,
       "plug": true,
@@ -4630,12 +5122,13 @@ const shops = [
       "pos": {
       "lat": 25.040253,
       "lon": 121.578252
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 206,
-      "name": "False.8 Workshop",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -4643,7 +5136,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3.5,
       "time": "11:30 - 22:30",
-      "mrt": "永春",
+      "mrt": "永春站",
       "address": "台北市信義區忠孝東路五段524巷1弄8號",
       "timelimit": false,
       "plug": true,
@@ -4654,12 +5147,13 @@ const shops = [
       "pos": {
       "lat": 25.041167,
       "lon": 121.579857
-      }
+      },
+      "mrt_id": 78
     },
     {
       "id": 207,
-      "name": "上下誌空間 underon",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -4667,22 +5161,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "12:30 - 21:30 \r\n定休日：週二週三",
-      "mrt": "圓山",
+      "mrt": "圓山站",
       "address": "台北市大同區大龍街231號2樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "有結合展覽跟選品，是一個很酷的藝文空間，平日安靜好工作，飲料也好喝。（老闆娘熱情親切，有時候可以問一下有無彩蛋餐點及調酒）店長有隱藏技能：塔羅占卜",
       "web": "https://www.facebook.com/underonspace/",
       "pos": {
       "lat": 25.0708827,
       "lon": 121.5159395
-      }
+      },
+      "mrt_id": 46
     },
     {
       "id": 208,
-      "name": "Falserma Coffee 諾馬咖啡-大同哈密店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4690,21 +5186,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3.5,
       "time": "10:00~18:30 周四公休",
-      "mrt": "圓山",
+      "mrt": "圓山站",
       "address": "台北市大同區哈密街65號",
       "timelimit": false,
       "plug": false,
       "standplace": true,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/Falsermacoffee65/?fref=ts",
       "pos": {
       "lat": 25.0730698,
       "lon": 121.5153476
-      }
+      },
+      "mrt_id": 46
     },
     {
       "id": 209,
-      "name": "Vis Cafe 窩是咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 3.5,
@@ -4712,7 +5211,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一到週五07:30~21:00 假日09:00~21:00",
-      "mrt": "圓山",
+      "mrt": "圓山站",
       "address": "台北市大同區酒泉街34-3號",
       "timelimit": false,
       "plug": true,
@@ -4723,12 +5222,13 @@ const shops = [
       "pos": {
       "lat": 25.0704815,
       "lon": 121.5191263
-      }
+      },
+      "mrt_id": 46
     },
     {
       "id": 210,
-      "name": "啡創工廠 Future Factory",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 4.5,
@@ -4736,21 +5236,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4.5,
       "time": "12:00-21:00",
-      "mrt": "圓山",
+      "mrt": "圓山站",
       "address": "台北市大同區民族西路31巷18號",
       "timelimit": true,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/future.factory.coffee",
       "pos": {
       "lat": 25.0691785,
       "lon": 121.519582
-      }
+      },
+      "mrt_id": 46
     },
     {
       "id": 211,
-      "name": "Changee 噪咖",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4,
@@ -4758,22 +5261,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "12:00-21:00",
-      "mrt": "芝山",
+      "mrt": "芝山站",
       "address": "台北市士林區福華路180號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "偶遇活動會比較吵雜，但平日營業時間滿安靜適合工作，桌面超大 XD",
       "web": "https://www.facebook.com/Falseisekitchen.tw/",
       "pos": {
       "lat": 25.1059198,
       "lon": 121.5222396
-      }
+      },
+      "mrt_id": 49
     },
     {
       "id": 212,
-      "name": "Cafe Hidden Gem 璞石咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4781,77 +5286,99 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 2,
       "time": "12:00-21:00\r\n週二公休",
-      "mrt": "芝山",
+      "mrt": "芝山站",
       "address": "台北市士林區中山北路六段439巷4號",
       "timelimit": false,
       "plug": true,
+      "standplace": undefined,
       "recommender": "EB",
       "comment": "自烘店，在天母的巷弄內。咖啡走淺焙路線，沖煮方式也走一個清新淡雅路線。店內安靜很適合工作閱讀。甜點也非常棒！",
+      "web": undefined,
       "pos": {
       "lat": 25.1147567,
       "lon": 121.5271057
-      }
+      },
+      "mrt_id": 49
     },
     {
       "id": 213,
-      "name": "Nichi Nichi 日子咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市大同區赤峰街17巷8號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/cafenichinichi/",
       "pos": {
       "lat": 25.053707,
       "lon": 121.519665
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 214,
-      "name": "共?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
-      "coffee": ,
+      "coffee": undefined,
       "price": 3.5,
       "decoration": 5,
       "distance_mrt": 4,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市大同區赤峰街22號1樓",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/gunglok/",
       "pos": {
       "lat": 25.0560244,
       "lon": 121.5196056
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 215,
-      "name": "ILHA FORMOSA CAF?",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
-      "mrt": "中山",
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市大同區赤峰街41巷8號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/IlhaFormosaCafe/",
       "pos": {
       "lat": 25.054839,
       "lon": 121.5202424
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 216,
-      "name": "蘑菇咖啡MOGU CAFE'",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4,
@@ -4859,29 +5386,32 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一到週四 12:00-21:00 \r\n週五到週六11:00-22:00",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市大同區南京西路25巷18-1號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "餐點、甜點、飲品皆是手作，分量很實在\r\n空間氣氛很舒服，音樂好聽，有面大窗戶採光好\r\n也可作包場服務\r\n1樓賣設計商品、2,3樓是咖啡廳",
       "web": "https://www.facebook.com/boodaymogu/\r\n\r\nhttp://www.mogu.com.tw",
       "pos": {
       "lat": 25.0545725,
       "lon": 121.5203564
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 217,
-      "name": "61 Falsete",
-      "wifi_stable": ,
-      "avaliblility": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市大同區南京西路64巷10弄6號",
       "timelimit": false,
       "plug": false,
@@ -4892,12 +5422,13 @@ const shops = [
       "pos": {
       "lat": 25.0525365,
       "lon": 121.5182071
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 218,
-      "name": "找地方坐Have a seat",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -4905,7 +5436,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "11:30-21:30 （週一公休）",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市大同區南京西路87-1號2樓",
       "timelimit": false,
       "plug": true,
@@ -4916,12 +5447,13 @@ const shops = [
       "pos": {
       "lat": 25.0533438,
       "lon": 121.5183518
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 219,
-      "name": "角咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4929,21 +5461,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "週一、二、三、六、日 ：10:00-21:00\r\n週四、五：10:00-18:00",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市大同區太原路131號2樓",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/trianglegardencafe/",
       "pos": {
       "lat": 25.0530659,
       "lon": 121.5161014
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 220,
-      "name": "T-park cafe&eatery",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -4951,7 +5486,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 3.5,
       "time": "11:30-22:00 （週一公休）",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區林森北路107巷10號",
       "timelimit": false,
       "plug": true,
@@ -4962,12 +5497,13 @@ const shops = [
       "pos": {
       "lat": 25.0501908,
       "lon": 121.5254324
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 221,
-      "name": "artco 典藏咖啡廳 - 長安店",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 3.5,
@@ -4975,7 +5511,7 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 5,
       "time": "07:30 - 23:00",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區長安東路一段8-1號",
       "timelimit": false,
       "plug": true,
@@ -4986,12 +5522,13 @@ const shops = [
       "pos": {
       "lat": 25.0494757,
       "lon": 121.5225978
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 222,
-      "name": "設計寓",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -4999,7 +5536,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "10:00-22:00\r\n週一公休",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區長安西路19巷2弄7號3樓",
       "timelimit": false,
       "plug": true,
@@ -5010,55 +5547,63 @@ const shops = [
       "pos": {
       "lat": 25.0508676,
       "lon": 121.5203972
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 223,
-      "name": "坐坐咖啡",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市中山區長安西路19巷8號",
       "timelimit": false,
+      "plug": undefined,
+      "standplace": undefined,
       "recommender": "Catz",
       "comment": "風格很特別的店，像是走進以前的阿嬤家",
       "web": "https://www.facebook.com/zuozuocafe/",
       "pos": {
       "lat": 25.050701,
       "lon": 121.5205655
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 224,
-      "name": "光一敘集",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 2.5,
       "coffee": 5,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 4,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市中山區中山北路二段20巷2-2號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "滿安靜的，座位滿多，頂樓很美可以拍美照XD",
       "web": "https://www.facebook.com/lightoneplus/",
       "pos": {
       "lat": 25.0534775,
       "lon": 121.5218788
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 225,
-      "name": "1+1 Together Republic Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -5066,22 +5611,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "週一至周四 12:00-21:30 周五 12:00-22:00\r\n週六11:30-22:30 週日11:30-21:30\r\n週二公休",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區中山北路二段26巷10-1號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "這裡充滿音樂，就像你回到家回有阿貓來磨蹭你一般，店裡有小說可以閱讀、甚至彈彈吉他、在這個空間消磨一整天的時間，美式咖啡一杯才＄５０可以做一整天!!有輕食!店內安靜貓咪都大剌剌的!",
       "web": "https://www.facebook.com/1plus1.Together.Republic/",
       "pos": {
       "lat": 25.0539189,
       "lon": 121.5217985
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 226,
-      "name": "響板",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 3.5,
       "coffee": 4.5,
@@ -5089,58 +5636,74 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 5,
       "time": "13:00-22:00",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區中山北路二段26巷23號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/%E9%9F%BF%E6%9D%BF-Woodensounds-Garnet-Cru-568338536528830/",
       "pos": {
       "lat": 25.0540352,
       "lon": 121.5210797
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 227,
-      "name": "Libo cafe",
-      "wifi_stable": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3,
       "coffee": 4,
       "price": 3.5,
       "decoration": 3.5,
       "distance_mrt": 3,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市中山區中山北路二段42巷12號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/wilbeck6akun/",
       "pos": {
       "lat": 25.0545945,
       "lon": 121.521935
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 228,
-      "name": "伯朗咖啡館中山二店",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "中山",
+      "time": undefined,
+      "mrt": "中山站",
       "address": "台北市中山區中山北路一段106之1號",
+      "timelimit": undefined,
+      "plug": undefined,
       "standplace": false,
+      "recommender": undefined,
       "comment": "桌子有點給小",
       "web": "https://www.mrbrown.com.tw/stores/InquiryDetail.aspx?AID=1&ID=4",
       "pos": {
       "lat": 25.0496708,
       "lon": 121.5212981
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 229,
-      "name": "EZspace共享空間",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5148,22 +5711,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "10:00-22:00(供餐至21:00)",
-      "mrt": "中山",
+      "mrt": "中山站",
       "address": "台北市中山區中山北路一段126巷12-1號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "近捷運2號出口，一樓飲料低消，有場地租借適合活動課程，有五層樓，環境舒適",
       "web": "www.ezspace.tw",
       "pos": {
       "lat": 25.0509752,
       "lon": 121.5215127
-      }
+      },
+      "mrt_id": 43
     },
     {
       "id": 230,
-      "name": "嵐山咖啡",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3,
       "coffee": 5,
@@ -5171,17 +5736,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4.5,
       "time": "週一~五10:00-20:00 週六10:00-18:00 週日公休",
-      "mrt": "中山國小",
+      "mrt": "中山國小站",
       "address": "台北市中山區新生北路三段45號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
+      "web": undefined,
       "pos": {
       "lat": 25.0654975,
       "lon": 121.5280833
-      }
+      },
+      "mrt_id": 83
     },
     {
       "id": 231,
-      "name": "Old Major Coffee",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4.5,
       "coffee": 5,
@@ -5189,7 +5761,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4.5,
       "time": "10:00 - 21:00",
-      "mrt": "中山國小",
+      "mrt": "中山國小站",
       "address": "台北市中山區新生北路三段45號",
       "timelimit": false,
       "plug": true,
@@ -5200,12 +5772,13 @@ const shops = [
       "pos": {
       "lat": 25.0654975,
       "lon": 121.5280833
-      }
+      },
+      "mrt_id": 83
     },
     {
       "id": 232,
-      "name": "Aussie Cafe 澳氏咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
@@ -5213,45 +5786,49 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "週一至五12:00-21:00 週六日10:00-21:00",
-      "mrt": "中山國小",
+      "mrt": "中山國小站",
       "address": "台北市中山區中山北路二段115巷33號",
       "timelimit": true,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "店內有張上下舖床的座位，勾起背包客許多回憶",
       "web": "http://www.aussie-cafe.com.tw",
       "pos": {
       "lat": 25.0609772,
       "lon": 121.5242664
-      }
+      },
+      "mrt_id": 83
     },
     {
       "id": 233,
-      "name": "Dodiddone Coffee",
-      "wifi_stable": ,
-      "avaliblility": ,
-      "quiet": ,
-      "coffee": ,
-      "price": ,
-      "decoration": ,
-      "distance_mrt": ,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": undefined,
+      "quiet": undefined,
+      "coffee": undefined,
+      "price": undefined,
+      "decoration": undefined,
+      "distance_mrt": undefined,
       "time": "周一至周六13:30-22:00\r\n周日13:00-20:00",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市松山區民權東路三段103巷3號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
       "recommender": "Rising",
+      "comment": undefined,
       "web": "https://www.facebook.com/dodiddonecoffeeresearch/",
       "pos": {
       "lat": 25.0625265,
       "lon": 121.5451273
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 234,
-      "name": "Quel Caf? - 克爾‧何等的咖啡",
-      "wifi_stable": 1,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 2,
       "coffee": 5,
@@ -5259,22 +5836,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一到週五 08:00-18:00\r\n週六: 10:00-17:00",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市松山區民權東路三段140巷2號之1",
       "timelimit": false,
       "plug": false,
       "standplace": true,
       "recommender": "FalseMI",
+      "comment": undefined,
       "web": "https://www.facebook.com/QuelCafe/",
       "pos": {
       "lat": 25.0618938,
       "lon": 121.5465586
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 235,
-      "name": "穿越九千公里交給你了唷",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.5,
       "coffee": 5,
@@ -5282,7 +5861,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "13:00~23:00（週一14:00開店）",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市松山區民權東路三段160巷19弄16號",
       "timelimit": false,
       "plug": true,
@@ -5293,12 +5872,13 @@ const shops = [
       "pos": {
       "lat": 25.0599163,
       "lon": 121.548027
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 236,
-      "name": "A Place Cafe",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5306,44 +5886,49 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "10:30 - 19:00",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市松山區民權東路三段160巷19弄32號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "空間大、咖啡餐點都優，門口有張大木桌非常適合工作，寵物友善空間",
       "web": "https://www.facebook.com/aplacecafe/?fref=ts",
       "pos": {
       "lat": 25.0594896,
       "lon": 121.5485479
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 237,
-      "name": "Milkglider Latteartist Unity",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 4,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 3,
-      "mrt": "中山國中",
+      "time": undefined,
+      "mrt": "中山國中站",
       "address": "台北市松山區民權東路三段160巷19弄36號",
       "timelimit": false,
       "plug": false,
       "standplace": false,
+      "recommender": undefined,
       "comment": "有隻店貓；店深處燈光不足；咖啡拉花極神，表演性很強的一家店",
       "web": "https://www.facebook.com/Milkglider/",
       "pos": {
       "lat": 25.059432,
       "lon": 121.5486704
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 238,
-      "name": "SD Coworking Plaza ",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4,
@@ -5351,22 +5936,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 4,
       "time": "周一到周五 9:00-18:00(18:00後只出不進) 假日可預約時間 ?(月租的話是24小時自由進出)\r\n",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市中山區合江街102巷18號",
       "timelimit": false,
-      "plug": "TRUE ",
+      "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "原木桌+人體工學椅+很多的插座，wifi速度快，有1F&2F環境安靜、氣氛很好、態度親切、採光充足。門口可以停機車。\r\n出入有門禁控管，不用擔心隨身物品。工作室的感覺，空間寬敞，有大沙發可以偷閒+曬日光浴。\r\n建議提早預約時間。自家單品咖啡、紅茶自助式無限量供應。有販售輕食、自家單品咖啡豆。\r\nB1 有空間可以辦活動跟會議。 公車站:合江街口",
       "web": "https://www.facebook.com/sdflat/",
       "pos": {
       "lat": 25.0586789,
       "lon": 121.5388068
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 239,
-      "name": "創咖啡 TRUST CAF?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
@@ -5374,7 +5961,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "13:30-22:00",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
       "address": "台北市中山區民權東路三段60巷7號7號",
       "timelimit": false,
       "plug": true,
@@ -5385,12 +5972,13 @@ const shops = [
       "pos": {
       "lat": 25.0625575,
       "lon": 121.5412421
-      }
+      },
+      "mrt_id": 4
     },
     {
       "id": 240,
-      "name": "Ms.Bobble 2號店",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3,
       "quiet": 4,
       "coffee": 4,
@@ -5398,20 +5986,24 @@ const shops = [
       "decoration": 4.5,
       "distance_mrt": 3.5,
       "time": "10:00-22:00",
-      "mrt": "中山國中",
+      "mrt": "中山國中站",
+      "address": undefined,
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "有好吃的蛋糕，優秀的沙拉系列!!!!(02 2509 1815)",
+      "web": undefined,
       "pos": {
-      "lat": ,
-      "lon": 
-      }
+      "lat": undefined,
+      "lon": undefined
+      },
+      "mrt_id": 4
     },
     {
       "id": 241,
-      "name": "春日號咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5419,31 +6011,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週一-週五07:00-18:00 週六-週日 08:00-18:00",
-      "mrt": "中正紀念堂",
-      "address": "台北市中正區南昌路一段36號1樓",
-      "timelimit": false,
-      "plug": "Yed",
-      "standplace": true,
-      "recommender": "Lillian Liu",
-      "comment": "交通方便，店內安靜，非常適合靜下心來待著享受咖啡香，店內以咖啡飲品為主，亦有提供簡易的輕食、點心。",
-      "web": "https://www.facebook.com/springcafefirst/",
-      "pos": {
-      "lat": 25.0318898,
-      "lon": 121.5165868
-      }
-    },
-    {
-      "id": 242,
-      "name": "春日號咖啡",
-      "wifi_stable": 5,
-      "avaliblility": 5,
-      "quiet": 5,
-      "coffee": 5,
-      "price": 5,
-      "decoration": 5,
-      "distance_mrt": 5,
-      "time": "週一-週五07:00-18:00 週六-週日 08:00-18:00",
-      "mrt": "中正紀念堂",
+      "mrt": "中正紀念堂站",
       "address": "台北市中正區南昌路一段36號1樓",
       "timelimit": false,
       "plug": true,
@@ -5454,32 +6022,63 @@ const shops = [
       "pos": {
       "lat": 25.0318898,
       "lon": 121.5165868
-      }
+      },
+      "mrt_id": 35
+    },
+    {
+      "id": 242,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
+      "avaliblility": 5,
+      "quiet": 5,
+      "coffee": 5,
+      "price": 5,
+      "decoration": 5,
+      "distance_mrt": 5,
+      "time": "週一-週五07:00-18:00 週六-週日 08:00-18:00",
+      "mrt": "中正紀念堂站",
+      "address": "台北市中正區南昌路一段36號1樓",
+      "timelimit": false,
+      "plug": true,
+      "standplace": true,
+      "recommender": "Lillian Liu",
+      "comment": "交通方便，店內安靜，非常適合靜下心來待著享受咖啡香，店內以咖啡飲品為主，亦有提供簡易的輕食、點心。",
+      "web": "https://www.facebook.com/springcafefirst/",
+      "pos": {
+      "lat": 25.0318898,
+      "lon": 121.5165868
+      },
+      "mrt_id": 35
     },
     {
       "id": 243,
-      "name": "虎記商行",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 0,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "中正紀念堂",
+      "time": undefined,
+      "mrt": "中正紀念堂站",
       "address": "台北市中正區寧波東街1-1號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
       "recommender": "Summer",
       "comment": "比較適合休息聊天，有貓咪",
       "web": "https://www.facebook.com/tigerdrinks/",
       "pos": {
       "lat": 25.0319251,
       "lon": 121.5194075
-      }
+      },
+      "mrt_id": 35
     },
     {
       "id": 244,
-      "name": "創客咖啡館 V CAf?",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -5487,22 +6086,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 5,
       "time": "10:00-21:00",
-      "mrt": "忠孝敦化",
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區安和路一段21巷7號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "主打工作室＋咖啡館，點一杯咖啡可以坐，也可以租工作室或辦活動",
       "web": "https://www.facebook.com/isV.cafe",
       "pos": {
       "lat": 25.0395734,
       "lon": 121.5504362
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 245,
-      "name": "夢遊咖啡館 Longtimeago Caf?",
-      "wifi_stable": 4.8,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3.8,
       "coffee": 4.5,
@@ -5510,51 +6111,59 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "10:00-21:00",
-      "mrt": "忠孝敦化",
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區安和路一段21巷9號",
       "timelimit": true,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "電影場景咖啡館，極光之愛跟我的鬼基友的咖啡館，咖啡館樓下是電影公司的攝影棚，隔壁是另外一間咖啡館，主打是可以工作的咖啡館，也能免費租投影機，還有工作室出租。",
       "web": "https://www.facebook.com/Longtimeagocafe/",
       "pos": {
       "lat": 25.0394965,
       "lon": 121.5505478
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 246,
-      "name": "Homie Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 3.5,
       "price": 3.5,
       "decoration": 4,
       "distance_mrt": 4,
-      "mrt": "忠孝敦化",
+      "time": undefined,
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區仁愛路四段345巷2弄11號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/homiecafe/",
       "pos": {
       "lat": 25.0385279,
       "lon": 121.5534563
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 247,
-      "name": "COSTUMICE CAF?",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
-      "quiet": ,
+      "quiet": undefined,
       "coffee": 3,
       "price": 3,
       "decoration": 3.5,
       "distance_mrt": 4.5,
-      "mrt": "忠孝敦化",
+      "time": undefined,
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區忠孝東路四段223巷71弄6號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
@@ -5563,30 +6172,38 @@ const shops = [
       "pos": {
       "lat": 25.0437923,
       "lon": 121.5525167
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 248,
-      "name": "敲敲咖啡 KFalseCK KAFE",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 2.5,
       "coffee": 3,
       "price": 2.5,
       "decoration": 4,
       "distance_mrt": 1,
-      "mrt": "忠孝敦化",
+      "time": undefined,
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區延吉街126巷10號",
+      "timelimit": undefined,
+      "plug": undefined,
+      "standplace": undefined,
+      "recommender": undefined,
+      "comment": undefined,
       "web": "https://www.facebook.com/kFalseckkafetaipei/",
       "pos": {
       "lat": 25.040225,
       "lon": 121.5544743
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 249,
-      "name": "左道 MinDemons",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 4,
       "coffee": 3.5,
@@ -5594,7 +6211,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:30-22:00 (Last Order:20:00) 每月第一週星期一公休",
-      "mrt": "忠孝敦化",
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區延吉街70巷2弄5號",
       "timelimit": false,
       "plug": true,
@@ -5605,12 +6222,13 @@ const shops = [
       "pos": {
       "lat": 25.0427981,
       "lon": 121.5536518
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 250,
-      "name": "咖啡瑪榭忠孝店",
-      "wifi_stable": 4.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4.5,
       "quiet": 4.5,
       "coffee": 4.5,
@@ -5618,30 +6236,34 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "07:30-20:00",
-      "mrt": "忠孝敦化",
+      "mrt": "忠孝敦化站",
       "address": "台北市大安區敦化南路一段233巷62號",
       "timelimit": true,
       "plug": true,
       "standplace": false,
       "recommender": "Leaf",
       "comment": "最近新裝潢，座位寬敞，環境舒適，咖啡和飲品還不錯，餐點有些小貴，推薦平日不限時的時候",
+      "web": undefined,
       "pos": {
       "lat": 25.040294,
       "lon": 121.5523823
-      }
+      },
+      "mrt_id": 75
     },
     {
       "id": 251,
-      "name": "新文明咖啡館",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3,
       "coffee": 4,
       "price": 4,
       "decoration": 3,
       "distance_mrt": 3,
-      "mrt": "忠孝復興",
+      "time": undefined,
+      "mrt": "忠孝復興站",
       "address": "台北市大安區大安路一段19巷13號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "Cos",
@@ -5650,12 +6272,13 @@ const shops = [
       "pos": {
       "lat": 25.0445553,
       "lon": 121.5469562
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 252,
-      "name": "慢步調咖啡館",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5663,7 +6286,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 5,
       "time": "11:00-22:00",
-      "mrt": "忠孝復興",
+      "mrt": "忠孝復興站",
       "address": "台北市大安區忠孝東路三段251巷1弄1號",
       "timelimit": false,
       "plug": true,
@@ -5674,12 +6297,13 @@ const shops = [
       "pos": {
       "lat": 25.0421047,
       "lon": 121.5417835
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 253,
-      "name": "Peekaboo Coffee 彼咖舖咖啡",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 4.5,
@@ -5687,22 +6311,24 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "13:00-22:00",
-      "mrt": "忠孝復興",
+      "mrt": "忠孝復興站",
       "address": "台北市大安區忠孝東路三段251巷7弄2號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "休息時間不定，要看 FB以免撲空，手沖單品不錯，冰滴建議加牛奶，司康好吃",
       "web": "https://www.facebook.com/PeekabooCoffee",
       "pos": {
       "lat": 25.0429298,
       "lon": 121.5417738
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 254,
-      "name": "Coffer Coffee 咖啡箱",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5710,22 +6336,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "週二至周四、週日 12:00-22:00\r\n周五、週六 12:00-24:00\r\n週一公休",
-      "mrt": "忠孝復興",
+      "mrt": "忠孝復興站",
       "address": "台北市松山區復興南路一段47巷7號",
       "timelimit": false,
       "plug": true,
       "standplace": false,
+      "recommender": undefined,
       "comment": "招牌的冰滴咖啡非常吸引人，老闆與員工服務態度非常好，很適合工作、聚會聊天，店家有提供免費的WiFi跟插座，還有全日供應的三明治、義大利麵等餐點，很輕鬆自在的一家店。",
       "web": "https://www.facebook.com/coffer.coffee/",
       "pos": {
       "lat": 25.0453663,
       "lon": 121.5444353
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 255,
-      "name": "homey's cafe",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
@@ -5733,8 +6361,9 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "12:00-24:00",
-      "mrt": "忠孝復興",
+      "mrt": "忠孝復興站",
       "address": "台北市大安區敦化南路一段236巷36號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "aphasia",
@@ -5743,12 +6372,13 @@ const shops = [
       "pos": {
       "lat": 25.0405308,
       "lon": 121.5465948
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 256,
-      "name": "IMP Dining Cafe'",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 3,
       "coffee": 4,
@@ -5756,7 +6386,7 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "平日 11:00~21:30\r\n週末 11:00~24:00 (若有重大比賽，則會延長營業時間)",
-      "mrt": "忠孝復興",
+      "mrt": "忠孝復興站",
       "address": "台北市大安區敦化南路一段238巷1號",
       "timelimit": false,
       "plug": true,
@@ -5767,20 +6397,23 @@ const shops = [
       "pos": {
       "lat": 25.0402386,
       "lon": 121.5479712
-      }
+      },
+      "mrt_id": 1
     },
     {
       "id": 257,
-      "name": "FabCafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 3.5,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 3.5,
-      "mrt": "忠孝新生",
+      "time": undefined,
+      "mrt": "忠孝新生站",
       "address": "台北市中山區八德路一段1號",
+      "timelimit": undefined,
       "plug": true,
       "standplace": true,
       "recommender": "阿川",
@@ -5789,12 +6422,13 @@ const shops = [
       "pos": {
       "lat": 25.0441499,
       "lon": 121.5294408
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 258,
-      "name": "BitterSweet 三創店",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -5802,22 +6436,24 @@ const shops = [
       "decoration": 3.5,
       "distance_mrt": 4,
       "time": "11:00-21:30",
-      "mrt": "忠孝新生",
+      "mrt": "忠孝新生站",
       "address": "台北市中山區市民大道三段2號11樓",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "等電梯要有耐心，除了咖啡也有精釀啤酒。廁所五星級，偶而還可以遇到郭董！XD",
       "web": "https://www.facebook.com/pages/Bittersweet-%E4%B8%89%E5%89%B5%E5%BA%97/1743145149254347?fref=ts",
       "pos": {
       "lat": 25.0454815,
       "lon": 121.5311273
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 259,
-      "name": "Crew Cafe",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 5,
@@ -5825,21 +6461,24 @@ const shops = [
       "decoration": 5,
       "distance_mrt": 5,
       "time": "12:00-22:00 (周一公休)",
-      "mrt": "忠孝新生",
+      "mrt": "忠孝新生站",
       "address": "台北市中山區松江路1-1號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "具有特色的劇場風格咖啡廳，咖啡好喝，經常有出奇不意的表演，非常適合團體開會討論。",
+      "web": undefined,
       "pos": {
       "lat": 25.0459384,
       "lon": 121.5331516
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 260,
-      "name": "小，黑珈琲",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 5,
       "coffee": 4,
@@ -5847,7 +6486,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 3.5,
       "time": "12:00-22:00",
-      "mrt": "忠孝新生",
+      "mrt": "忠孝新生站",
       "address": "台北市中山區新生北路一段11-5號1樓",
       "timelimit": false,
       "plug": true,
@@ -5858,12 +6497,13 @@ const shops = [
       "pos": {
       "lat": 25.0463783,
       "lon": 121.5323573
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 261,
-      "name": "PAPER ST. Coffee Company",
-      "wifi_stable": 0,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 5,
@@ -5871,7 +6511,7 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "10:00-20:00 無休",
-      "mrt": "忠孝新生",
+      "mrt": "忠孝新生站",
       "address": "台北市中正區八德路一段28號1樓",
       "timelimit": false,
       "plug": true,
@@ -5882,12 +6522,13 @@ const shops = [
       "pos": {
       "lat": 25.0436005,
       "lon": 121.5302273
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 262,
-      "name": "The Kaffa Lovers",
-      "wifi_stable": 5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 5,
       "quiet": 4,
       "coffee": 5,
@@ -5895,30 +6536,34 @@ const shops = [
       "decoration": 4,
       "distance_mrt": 4,
       "time": "週二至週五 10:00-19:00 六日09:00-19:00",
-      "mrt": "忠孝新生",
+      "mrt": "忠孝新生站",
       "address": "台北市中正區金山北路3號",
       "timelimit": false,
       "plug": true,
       "standplace": true,
+      "recommender": undefined,
       "comment": "木質清新裝潢，有站立座位，也有小型2-3人沙發，店家單品咖啡口味特殊，香氣迷人，有多種單品咖啡可供選擇，單品還會搭配聞香瓶供客人試聞，店家也會主動介紹咖啡的口感，很貼心",
       "web": "https://www.facebook.com/thekaffalovers/?fref=ts",
       "pos": {
       "lat": 25.0443417,
       "lon": 121.5304699
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 263,
-      "name": "卡那達咖啡店",
-      "wifi_stable": 3.5,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 3.5,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
       "decoration": 4,
       "distance_mrt": 5,
-      "mrt": "忠孝新生",
+      "time": undefined,
+      "mrt": "忠孝新生站",
       "address": "台北市中正區臨沂街13巷5號1樓",
+      "timelimit": undefined,
       "plug": true,
       "standplace": false,
       "recommender": "阿川",
@@ -5927,27 +6572,32 @@ const shops = [
       "pos": {
       "lat": 25.0423637,
       "lon": 121.5309052
-      }
+      },
+      "mrt_id": 74
     },
     {
       "id": 264,
-      "name": "特有種商行",
-      "wifi_stable": 4,
+      "name": "Puchi Space 小空間",
+      "wifi": true,
       "avaliblility": 4,
       "quiet": 3.5,
       "coffee": 4,
       "price": 4,
       "decoration": 5,
       "distance_mrt": 5,
-      "mrt": "忠孝新生",
+      "time": undefined,
+      "mrt": "忠孝新生站",
       "address": "台北市中正區臨沂街27巷4-1號",
       "timelimit": false,
+      "plug": undefined,
       "standplace": true,
       "recommender": "阿川",
+      "comment": undefined,
       "web": "https://www.facebook.com/realguts",
       "pos": {
       "lat": 25.0409247,
       "lon": 121.5306589
-      }
+      },
+      "mrt_id": 74
     }
   ]
