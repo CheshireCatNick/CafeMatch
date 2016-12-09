@@ -1284,7 +1284,7 @@
       "coffee": 4,
       "price": 4,
       "decoration": 5,
-      "distance_mrt": 4. 5 ,
+      "distance_mrt": 4.5 ,
       "time": "12:00~24:00",
       "mrt": "公館站",
       "address": "台北市中正區羅斯福路三段316巷8弄3號2樓",
