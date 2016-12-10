@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <script src="./js/mrt-data.js"></script>
+  <script src="./data/mrt-data.js"></script>
     <meta charset="utf-8">
     <title>Marker animations with <code>setTimeout()</code></title>
     <style>
@@ -75,10 +75,7 @@ function drop() {
 function addMarkerWithTimeout(position, timeout) {
   window.setTimeout(function() {
     let marker = new google.maps.Marker({
-      position: {
-        lat: position.lat,
-        lng: position.lon
-      },
+      position: position,
       map: map,
       animation: google.maps.Animation.DROP
     });
