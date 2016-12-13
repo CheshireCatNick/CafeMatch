@@ -84,9 +84,9 @@ function showsearchresult(searchresult) {
   clearMarkers();
   for ( var i = 0; i < searchresult.length; i++) {
     /* add the info we want to show*/
-    var name = searchresult[i].name;
-    var content = searchresult[i].address;
-    var position_shop = searchresult[i].pos;
+    var name = searchresult.name[i];
+    var content = searchresult.address[i];
+    var position_shop = searchresult.pos[i];
     var html = "<h3>" + name + "</h3><p>" + content +"</p>"; // 設定點選地圖標記後的對話氣泡框的內容 (可以使用 HTML tag)
     // 把地標加到地圖上
     var marker_shop = new google.maps.Marker
