@@ -228,20 +228,25 @@ var w = 500,
 
 var colorscale = d3.scale.category10();
 
+const shop = shops[0];
+
+
 //Legend titles
-var LegendOptions = ['Puchi Space 小空間'];
-
-
+var LegendOptions = [shop.name];
+wifisignal = 0
+if (shop.wifi)
+	wifisignal = 5
+console.log(shop);
 //Data
 var d = [
 		  [
-			{axis:"wifi",value:5},
-			{axis:"空位",value:5},
-			{axis:"安靜程度",value:5},
-			{axis:"咖啡好喝",value:4},
-			{axis:"價格便宜",value:4},
-			{axis:"裝潢風格",value:4},
-			{axis:"近捷運站",value:4},
+			{axis:"wifi",value: wifisignal},
+			{axis:"空位",value: shop.availibility},
+			{axis:"安靜程度",value: shop.quiet},
+			{axis:"咖啡好喝",value: shop.coffee},
+			{axis:"價格便宜",value: shop.price},
+			{axis:"裝潢風格",value: shop.decoration},
+			{axis:"近捷運站",value: shop.distance_mrt},
 		  ],
 		];
 
