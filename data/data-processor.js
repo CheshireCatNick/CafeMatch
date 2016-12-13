@@ -3,7 +3,7 @@
  * @description: process data
  * @author: Nicky
  */
-const shops = require('./shop');
+const shops = require('./shop-data');
 const mrts = require('./mrt-data');
 
 // return square distance from two pos
@@ -38,12 +38,14 @@ function makeDistances() {
 
 function modifyIDPos() {
   for (let shop of shops) {
-    shop.mrt_id = shop.mrt_id - 1;
+    shop.availibility = shop.avaliblility;
+    delete shop.avaliblility;
+    //shop.mrt_id = shop.mrt_id - 1;
   }
 
 }
 
 
 modifyIDPos();
-makeDistances();
+//makeDistances();
 console.log(shops);
