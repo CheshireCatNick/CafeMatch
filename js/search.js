@@ -4,13 +4,13 @@
  * @author: Nicky
 */
 /** search spec
- * name: string or undefined (don't care)
+ * name: string; empty string or undefined (don't care)
  * wifi: true / false (don't care)
  * plug: true / false (don't care)
  * coffee: 0 ~ 5 / undefined (don't care)
  * price: same
  * quiet: same
- * mrt: id, only used for sorting
+ * mrt: id, only used for sorting / undefined, don't sort the result
  */
 let _query = {
   name: undefined,
@@ -28,7 +28,8 @@ function search(query) {
     .filter(wifiPlugFilter)
     .filter(coffeePriceQuietFilter);
   // sort result by distance and MRT
-
+  if (_query.MRT !== undefined)
+    result = result.sort(compareDist);
   return result;
 }
 
@@ -54,11 +55,14 @@ function wifiPlugFilter(shop) {
 };
 function coffeePriceQuietFilter(shop) {
   let coffeeOK, priceOK, quietOK;
-  if (_query.coffee) coffeeOK = (_query.coffee <= shop.coffee);
+  if (_query.coffee !== undefined) coffeeOK = (_query.coffee <= shop.coffee);
   else coffeeOK = true;
-  if (_query.price) priceOK = (_query.price <= shop.price);
+  if (_query.price !== undefined) priceOK = (_query.price <= shop.price);
   else priceOK = true;
-  if (_query.quiet) quietOK = (_query.quiet <= shop.quiet);
+  if (_query.quiet !== undefined) quietOK = (_query.quiet <= shop.quiet);
   else quietOK = true;
   return (coffeeOK && priceOK && quietOK);
 };
+function compareDist(a, b) {
+  return a.distances[_query.MRT] - b.distances[_query.MRT];
+}
