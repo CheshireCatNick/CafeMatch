@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="./data/mrt-data.js"></script>
+  <script src="./data/shop-data.js"></script>
+    <meta charset="utf-8">
+    <title>Marker animations with <code>setTimeout()</code></title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+      #floating-panel {
+        margin-left: -52px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button id="drop" onclick="showsearchresult()">Drop Markers</button>
+     </div>
+    <div id="map"></div>
+    <script>
+// If you're adding a number of markers, you may want to drop them on the map
+// consecutively rather than all at once. This example shows how to use
+// window.setTimeout() to space your markers' animation.
+
+
+
+
+var mrtMarkers = [];
+var map;
+var mapcenter;
+
+
+var infoWindow = new google.maps.InfoWindow(); // 設定氣泡框 (message bubble)，顯示地標相關的資訊
+var markerClusterer = [];   // 設定標記叢集 (marker clusterer)
+
+function initMap() {
+  mapcenter = {lat: 25.0261342, lng: 121.522922};    /* put in drop func*/
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: mapcenter
+  });
+  drawmrt(mrts);
+  console.log(mrts);
+}
+
+
+function drawmrt(mrtdata){
+  const Mrtmaker = [];
+  
+  for (var i = 0; i < mrtdata.length; i++){
+    marker_mrt = new google.maps.Marker({
+    position: mrtdata.pos[i],
+    map: map[i],
+    label: mrtdata.station[i]    
+  })
+    Mrtmaker[i] = marker_mrt;
+  }
+  Mrtmaker[i].setMap(map);
+}
+
+
+
+function showsearchresult(searchresult[]) {
+  clearMarkers();
+  for ( var i = 0; i < searchresult.length; i++) {
+    /* add the info we want to show*/
+    var name = searchresult[i].name;
+    var content = searchresult[i].address;
+    var position_shop = searchresult[i].pos;
+    var html = "<h3>" + name + "</h3><p>" + content +"</p>"; // 設定點選地圖標記後的對話氣泡框的內容 (可以使用 HTML tag)
+    // 把地標加到地圖上
+    var marker_shop = new google.maps.Marker
+        map : map,
+        position : position_shop,
+        animation: google.maps.Animation.DROP,
+  };
+    marker_shop.addListener('click',toggleBounce); 
+
+    bindInfoWindow(marker_shop, map, infoWindow, html); // 把對話框內容綁到地圖標記上頭
+    // 先把所有要做成標記叢集 (marker clusterer) 的標記通通塞進一個集合 (collection)
+    markerClusterer.push(marker_shop); 
+
+  // 設定標記叢集的外觀
+    var markerClusterDraw = new MarkerClusterer(map, markerClusterer, {
+      gridSize: 80,  // 多少範圍內的標記要撿在一組 (是用 grid 的概念，落在框外的有時會自成單一地圖標記 (marker)，不會轉成 marker clusterer)
+      styles: [{
+            url: 'clusterer.png', // 可以自訂圖案
+            height: 45,
+            width: 50,
+            anchor: [1, 12],    // 文字出現在標記上的哪個位置 (position on marker)
+            textColor: '#ffffff',
+            textSize: 13
+            },
+            {
+            url: 'clusterer.png',
+            height: 45,
+            width: 50,
+            anchor: [1, 8],
+            textColor: '#ffffcc',
+            textSize: 8
+            }],
+    });
+}
+
+// 設定地圖標記 (marker) 點開後的對話氣泡框 (message bubble)
+function bindInfoWindow(marker_shop, map, infoWindow, html) {
+  // 除了 click 事件，也可以用 mouseover 等事件觸發氣泡框顯示
+  google.maps.event.addListener(marker_shop, 'mouseover', function() { 
+      infoWindow.setContent(html);
+      infoWindow.open(map, marker_shop);
+   });
+}
+
+function toggleBounce(){
+  if (marker_shop.getAnimation() !== null) {
+  marker_shop.setAnimation(null);
+} else {
+  marker_shop.setAnimation(google.maps.Animation.BOUNCE);
+}
+}
+
+
+function clearMarkers() {
+  for (var i = 0; i < marker_shop.length; i++) {
+    marker_shop[i].setMap(null);
+  }
+  marker_shop = [];
+}
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_3G8-RY5LVIz-g21oC4IOCiM7bMYVc-Y&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
