@@ -71,12 +71,11 @@ function drawmrt(mrtdata){
     marker_mrt = new google.maps.Marker({
     position: mrtdata.pos[i],
     map: map[i],
-    label: mrtdata.station[i]
+    label: mrtdata.station[i]    
+  }
     Mrtmaker[i] = marker_mrt
   }
-  
-    Mrtmaker[i].setMap(map);
-  }
+  Mrtmaker[i].setMap(map);
 }
 
 
