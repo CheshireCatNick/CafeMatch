@@ -40,7 +40,7 @@ var RadarChart = {
 	var allAxis = (d[0].map(function(i, j){return i.axis}));
 	var total = allAxis.length;
 	var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
-	var Format = d3.format('%');
+	var Format = d3.format('');
 	d3.select(id).select("svg").remove();
 	
 	var g = d3.select(id)
@@ -236,12 +236,12 @@ var LegendOptions = ['Puchi Space 小空間'];
 var d = [
 		  [
 			{axis:"wifi",value:5},
-			{axis:"availability",value:5},
-			{axis:"quiet",value:5},
-			{axis:"coffee",value:4},
-			{axis:"price",value:4},
-			{axis:"decoration",value:4},
-			{axis:"distance_mrt",value:4},
+			{axis:"空位",value:5},
+			{axis:"安靜程度",value:5},
+			{axis:"咖啡好喝",value:4},
+			{axis:"價格便宜",value:4},
+			{axis:"裝潢風格",value:4},
+			{axis:"近捷運站",value:4},
 		  ],
 		];
 
