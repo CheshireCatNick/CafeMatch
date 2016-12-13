@@ -3,13 +3,13 @@
  * @description: process data
  * @author: Nicky
  */
-const shops = require('./shop-data');
+const shops = require('./shop');
 const mrts = require('./mrt-data');
 
 // return square distance from two pos
 function calcDistance(pos1, pos2) {
-  let a = pos1.lat, b = pos1.lon;
-  let c = pos2.lat, d = pos2.lon;
+  let a = pos1.lat, b = pos1.lng;
+  let c = pos2.lat, d = pos2.lng;
   return (a - c) * (a - c) + (b - d) * (b - d);
 }
 
@@ -22,6 +22,7 @@ function makeDistances() {
 
     
     // check if this is the closest mrt
+    /*
     let min = shop.distances[0];
     let id = 0;
     for (let i = 0; i < mrts.length; i++)
@@ -31,21 +32,18 @@ function makeDistances() {
       }
     if (id != shop.mrt_id)
       console.log(shop.id);
-    
+    */
   }
 }
 
 function modifyIDPos() {
   for (let shop of shops) {
-    shop.id = shop.id - 1;
-    let newPos = {
-      lat: shop.pos.lat,
-      lng: shop.pos.lon
-    };
-    shop.pos = newPos;
     shop.mrt_id = shop.mrt_id - 1;
-    shop.distances = shop.distances.slice(1, shop.distances.length);
   }
+
 }
+
+
 modifyIDPos();
+makeDistances();
 console.log(shops);

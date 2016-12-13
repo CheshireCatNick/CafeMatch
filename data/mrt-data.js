@@ -322,3 +322,4 @@ const mrts = [ { mrt_id: 0,
   { mrt_id: 107,
     station: '松山站',
     pos: { lat: 25.0498846, lng: 121.5775295 } } ];
+//module.exports = mrts;
