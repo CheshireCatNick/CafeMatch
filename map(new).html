@@ -66,6 +66,8 @@ function initMap() {
 }
 
 
+/*I think map already show the info of mrt
+
 function drawMrt(mrtdata){
     
   for (var i = 0; i < mrtdata.length; i++){
@@ -87,6 +89,7 @@ function drawMrt(mrtdata){
     mrtMaker.push(marker_mrt);
   }
 }
+*/
 
 function trySearchResult(){
   showSearchResult(shops);
@@ -98,7 +101,7 @@ function showSearchResult(searchResult){
     console.log(searchResult.id);
 
     shopIcon = {
-      url: 'data/cafe.png',
+      url: 'https://cheshirecatnick.github.io/CafeMatch/data/cafe.png',
       scaledSize: new google.maps.Size(30, 30), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0) // anchor
