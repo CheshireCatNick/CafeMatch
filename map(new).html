@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <script src="./data/mrt-data.js"></script>
-  <script src="./data/shop-data.js"></script>
+  <script src="https://cheshirecatnick.github.io/CafeMatch/data/mrt-data.js"></script>
+  <script src="https://cheshirecatnick.github.io/CafeMatch/data/shop-data.js"></script>
     <meta charset="utf-8">
     <title>Marker animations with <code>setTimeout()</code></title>
     <style>
@@ -60,19 +60,19 @@ function initMap() {
     zoom: 14,
     center: mapCenter
   });
-  drawMrt(mrts);
+  
   console.log(mrts);
   infoWindow = new google.maps.InfoWindow("");
 }
 
 
-/*I think map already show the info of mrt
+/*I think map already show the info of mrt*/
 
 function drawMrt(mrtdata){
     
   for (var i = 0; i < mrtdata.length; i++){
     mrtIcon = {
-      url: 'data/mrt.png',
+      url: './data/mrt.png',
       scaledSize: new google.maps.Size(20, 20), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0) // anchor
@@ -89,7 +89,7 @@ function drawMrt(mrtdata){
     mrtMaker.push(marker_mrt);
   }
 }
-*/
+
 
 function trySearchResult(){
   showSearchResult(shops);
