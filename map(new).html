@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <script src="./data/mrt-data.js"></script>
-  <script src="./data/shop-data.js"></script>
+  <script src="mrt-data.js"></script>
+  <script src="shop-data.js"></script>
     <meta charset="utf-8">
     <title>Marker animations with <code>setTimeout()</code></title>
     <style>
@@ -34,7 +34,7 @@
   </head>
   <body>
     <div id="floating-panel">
-      <button id="drop" onclick="showsearchresult()">Drop Markers</button>
+      <button id="drop" onclick="trySearchResult()">Drop Markers</button>
      </div>
     <div id="map"></div>
     <script>
@@ -45,106 +45,109 @@
 
 
 
-var mrtMarkers = [];
+var mrtMaker = [];
 var map;
-var mapcenter;
+var mapCenter;
 
 
-var infoWindow = new google.maps.InfoWindow(); // 設定氣泡框 (message bubble)，顯示地標相關的資訊
-var markerClusterer = [];   // 設定標記叢集 (marker clusterer)
+
+var infoWindow = null; // 設定氣泡框 (message bubble)，顯示地標相關的資訊
+var markerShops = [];   // 設定標記叢集 (marker clusterer)
 
 function initMap() {
-  mapcenter = {lat: 25.0261342, lng: 121.522922};    /* put in drop func*/
+  mapCenter = {lat: 25.0261342, lng: 121.522922};    /* put in drop func*/
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: mapcenter
+    zoom: 14,
+    center: mapCenter
   });
-  drawmrt(mrts);
+  drawMrt(mrts);
   console.log(mrts);
+  infoWindow = new google.maps.InfoWindow("");
 }
 
 
-function drawmrt(mrtdata){
-  const Mrtmaker = [];
-  
+function drawMrt(mrtdata){
+    
   for (var i = 0; i < mrtdata.length; i++){
+    mrtIcon = {
+      url: 'data/mrt.png',
+      scaledSize: new google.maps.Size(20, 20), // scaled size
+      origin: new google.maps.Point(0,0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
+    
     marker_mrt = new google.maps.Marker({
-    position: mrtdata.pos[i],
-    map: map[i],
-    label: mrtdata.station[i]    
-  })
-    Mrtmaker[i] = marker_mrt;
-  }
-  Mrtmaker[i].setMap(map);
-}
-
-
-
-function showsearchresult(searchresult) {
-  clearMarkers();
-  for ( var i = 0; i < searchresult.length; i++) {
-    /* add the info we want to show*/
-    var name = searchresult.name[i];
-    var content = searchresult.address[i];
-    var position_shop = searchresult.pos[i];
-    var html = "<h3>" + name + "</h3><p>" + content +"</p>"; // 設定點選地圖標記後的對話氣泡框的內容 (可以使用 HTML tag)
-    // 把地標加到地圖上
-    var marker_shop = new google.maps.Marker
-        map : map,
-        position : position_shop,
-        animation: google.maps.Animation.DROP
-  };
-    marker_shop.addListener('click',toggleBounce); 
-
-    bindInfoWindow(marker_shop, map, infoWindow, html); // 把對話框內容綁到地圖標記上頭
-    // 先把所有要做成標記叢集 (marker clusterer) 的標記通通塞進一個集合 (collection)
-    markerClusterer.push(marker_shop); 
-
-  // 設定標記叢集的外觀
-    var markerClusterDraw = new MarkerClusterer(map, markerClusterer, {
-      gridSize: 80,  // 多少範圍內的標記要撿在一組 (是用 grid 的概念，落在框外的有時會自成單一地圖標記 (marker)，不會轉成 marker clusterer)
-      styles: [{
-            url: 'clusterer.png', // 可以自訂圖案
-            height: 45,
-            width: 50,
-            anchor: [1, 12],    // 文字出現在標記上的哪個位置 (position on marker)
-            textColor: '#ffffff',
-            textSize: 13
-            },
-            {
-            url: 'clusterer.png',
-            height: 45,
-            width: 50,
-            anchor: [1, 8],
-            textColor: '#ffffcc',
-            textSize: 8
-            }],
+      position: mrtdata[i].pos,
+      map: map,
+      label: mrtdata[i].station,
+      icon: mrtIcon
     });
+    marker_mrt.setMap(map);
+
+    mrtMaker.push(marker_mrt);
+  }
 }
 
+function trySearchResult(){
+  showSearchResult(shops);
+}
+
+function showSearchResult(searchResult){
+  clearMarkers();
+  for ( var i = 0; i < searchResult.length; i++){
+    console.log(searchResult.id);
+
+    shopIcon = {
+      url: 'data/cafe.png',
+      scaledSize: new google.maps.Size(30, 30), // scaled size
+      origin: new google.maps.Point(0,0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
+    var markerShop = new google.maps.Marker({
+        position: searchResult[i].pos,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: shopIcon
+    });
+    markerShop.setMap(map);
+    markerShops.push(markerShop);
+    var html = "<h3>" + searchResult[i].name + "</h3><p>" + searchResult[i].address +"</p>";
+    bounce(markerShop, map);
+    bindInfoWindow(markerShop, map, infoWindow, html);
+  }
+}
+
+function bounce(markerShop, map){
+  google.maps.event.addListener(markerShop, 'click',function() {
+      if (markerShop.getAnimation() !== null) {
+        markerShop.setAnimation(null);
+      } else {
+        markerShop.setAnimation(google.maps.Animation.BOUNCE); 
+   }});
+}
 // 設定地圖標記 (marker) 點開後的對話氣泡框 (message bubble)
-function bindInfoWindow(marker_shop, map, infoWindow, html) {
+function bindInfoWindow(markerShop, map, infoWindow, html) {
   // 除了 click 事件，也可以用 mouseover 等事件觸發氣泡框顯示
-  google.maps.event.addListener(marker_shop, 'mouseover', function() { 
-      infoWindow.setContent(html);
-      infoWindow.open(map, marker_shop);
+  google.maps.event.addListener(markerShop, 'mouseover', function() { 
+  infoWindow.setContent(html);
+  infoWindow.open(map, markerShop);
    });
 }
 
 function toggleBounce(){
-  if (marker_shop.getAnimation() !== null) {
-  marker_shop.setAnimation(null);
+  if (markerShop.getAnimation() !== null) {
+  markerShop.setAnimation(null);
 } else {
-  marker_shop.setAnimation(google.maps.Animation.BOUNCE);
+  markerShop.setAnimation(google.maps.Animation.BOUNCE);
 }
 }
 
 
 function clearMarkers() {
-  for (var i = 0; i < marker_shop.length; i++) {
-    marker_shop[i].setMap(null);
+  for (var i = 0; i < markerShops.length; i++) {
+    markerShops[i].setMap(null);
   }
-  marker_shop = [];
+  markerShops = [];
 }
     </script>
     <script async defer
