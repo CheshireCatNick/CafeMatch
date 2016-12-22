@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CafeMatch</title>
-    <meta charset="utf-8">
-    <script src="./data/shop-data.js"></script>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <!-- jquery and bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- for chessy's input -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/css/bootstrap-slider.css">  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/bootstrap-slider.js"></script>
 
-  </body>
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>CafeMatch</title>
+</head>
+<body>
+  <div class="row" id="title-row">
+    <div class="col-lg-12" id="title">
+      <div class="jumbotron">
+        <h1>CafeMatch</h1>
+        <h2>Find a cafe shop that match you the best!</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="input-gmap">
+    <div class="col-lg-3 text-center block" id="input">
+      <h1 class="header">Nice to Have</h1>
+      <label for="usr">name</label>
+      <br>
+      <input type="text" id="name">
+      <br><br>
+      <label class="checkbox-inline"><input id="wifi" type="checkbox" value="">wifi</label>
+      <label class="checkbox-inline"><input id="outlet" type="checkbox" value="">outlets</label>
+      <br><br>
+      <label for="usr">decent coffee</label>
+      <br>
+      <input id="coffee" type="text" data-slider-value="0"/>
+      <br><br>
+      <label for="usr" >quietness </label>
+      <br>
+      <input id="quiet" type="text" data-slider-value="0"/>
+      <br><br>
+      <label for="usr">price</label>
+      <br>
+      <input id="price" type="text" data-slider-value="0"/>
+      <br><br>
+      <button id="submit-btn" type="button" onclick="submit()" class="btn btn-primary">search</button>
+    </div>
+    <div class="col-lg-9 text-center block" id="gmap">
+      <h1 class="header">Cafe Map</h1>
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="row text-center" id="radar-detail">
+    <div class="col-lg-5" id="radar">
+      <h1 class="header">Radar</h1>
+    </div>
+    <div class="col-lg-5 text-center" id="detail">
+      <h1 class="header">Information</h1>
+    </div>
+  </div>
+  <div class="row text-center" id="footer">
+    <div class="col-lg-12" id="radar">
+      footer
+    </div>
+  </div>
+
+</div>
+</body>
+
+
+
+<script src="./data/mrt-data.js"></script>
+<script src="./data/shop-data.js"></script>
+<script src="./js/gmap.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_3G8-RY5LVIz-g21oC4IOCiM7bMYVc-Y&callback=initMap"></script>
+<script src="./js/search.js"></script>
+<script src="./js/constraint.js"></script>
+<script>
+
+</script>
+
 </html>

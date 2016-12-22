@@ -1,0 +1,50 @@
+body {
+  margin: 70px;
+  margin-top: 5px;
+  font-size: 20px;
+
+}
+
+.debug {
+  border-color: black;
+  border-style: solid;
+}
+#title-row {
+  height: 200px;
+}
+.header {
+  padding-bottom: 40px;
+}
+
+.jumbotron {
+  background-color: black;
+
+  background-image: url("../pic/cafe-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+  background-position: center;
+
+  color: white;
+}
+.jumbotron h1, h2 {
+  padding-left: 200px;
+}
+#input-gmap {
+
+
+}
+#input {
+  background-color: #E0E0E0;
+}
+#submit-btn {
+  margin-bottom: 55px;
+}
+#map {
+  height: 600px;
+  width: 100%;
+}
+#radar-detail {
+
+
+}
+
