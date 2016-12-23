@@ -11,12 +11,18 @@ mapCenterTry = undefined
 
 function initMap() {
       /* put in drop func*/
+  const withoutPOI = [{
+    featureType: "poi",
+    elementType: "labels",
+    stylers: [{ visibility: "off" }]
+  }];
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 14,
-    center: {lat: 25.0373, lng: 121.5287}
+    center: {lat: 25.0373, lng: 121.5287},
+    styles: withoutPOI
   });
   
-  console.log(mrts);
+  // console.log(mrts);
   infoWindow = new google.maps.InfoWindow("");
 }
 
@@ -32,7 +38,7 @@ function showSearchResult(searchResult,center){
   //看有無選取mrt
   if(center !== undefined){
     map.setCenter(center);
-    map.setZoom(18);
+    map.setZoom(17);
   } else{
     map.setCenter({lat: 25.0373, lng: 121.5287});
     map.setZoom(13);
@@ -41,10 +47,11 @@ function showSearchResult(searchResult,center){
 
 
   for ( var i = 0; i < searchResult.length; i++){
-    console.log(searchResult.id);
+    //console.log(searchResult[i].id);
 
     shopIcon = {
-      url: 'https://cheshirecatnick.github.io/CafeMatch/data/cafe.png',
+      //url: 'https://cheshirecatnick.github.io/CafeMatch/data/cafe.png',
+      url: './pic/cafe.png',
       scaledSize: new google.maps.Size(30, 30), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0) // anchor
@@ -102,7 +109,7 @@ function drawMrt(mrtdata){
     
   for (var i = 0; i < mrtdata.length; i++){
     mrtIcon = {
-      url: './data/mrt.png',
+      url: './pic/mrt.png',
       scaledSize: new google.maps.Size(20, 20), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0) // anchor
