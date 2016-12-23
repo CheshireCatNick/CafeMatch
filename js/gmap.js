@@ -38,7 +38,7 @@ function showSearchResult(searchResult,center){
   //看有無選取mrt
   if(center !== undefined){
     map.setCenter(center);
-    map.setZoom(17);
+    map.setZoom(16);
   } else{
     map.setCenter({lat: 25.0373, lng: 121.5287});
     map.setZoom(13);
@@ -52,7 +52,7 @@ function showSearchResult(searchResult,center){
     shopIcon = {
       //url: 'https://cheshirecatnick.github.io/CafeMatch/data/cafe.png',
       url: './pic/cafe.png',
-      scaledSize: new google.maps.Size(30, 30), // scaled size
+      scaledSize: new google.maps.Size(35, 35), // scaled size
       origin: new google.maps.Point(0,0), // origin
       anchor: new google.maps.Point(0, 0) // anchor
     };
@@ -89,10 +89,10 @@ function bindInfoWindow(markerShop, map, infoWindow, html) {
 
 function toggleBounce(){
   if (markerShop.getAnimation() !== null) {
-  markerShop.setAnimation(null);
-} else {
-  markerShop.setAnimation(google.maps.Animation.BOUNCE);
-}
+    markerShop.setAnimation(null);
+  } else {
+    markerShop.setAnimation(google.maps.Animation.BOUNCE);
+  }
 }
 
 
