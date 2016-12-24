@@ -60,7 +60,7 @@ function showSearchResult(searchResult,center){
     var html = "<h3>" + searchResult[i].name + "</h3><p>"
                 + "營業時間: "+ searchResult[i].time +"</p><p>"
                 + "地址: "+ searchResult[i].address +"</p><p>" 
-                +"網頁: "+ searchResult[i].web +"</p>";
+                + `<a href="${searchResult[i].web}">網頁</a>` +"</p>";
     addListener(markerShop, map);
     bindInfoWindow(markerShop, map, infoWindow, html);
   }
@@ -79,7 +79,7 @@ function addListener(markerShop, map) {
       addShopData(markerShop.shop);
     }
     // update info
-
+    updateInfo(markerShop.shop);
   });
 }
 // 設定地圖標記 (marker) 點開後的對話氣泡框 (message bubble)

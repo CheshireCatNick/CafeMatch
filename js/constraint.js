@@ -21,10 +21,7 @@ function submit() {
   let coffee = slider1.getValue();
   let quiet = slider2.getValue();
   let price = slider3.getValue();
-  console.log(name);
-  console.log(wifi);
-  console.log(outlet);
-  console.log(coffee);console.log(quiet);console.log(price);
+
   let query = {
     name: name,
     wifi: wifi,
