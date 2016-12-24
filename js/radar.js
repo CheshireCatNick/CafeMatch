@@ -50,7 +50,6 @@ var RadarChart = {
       .attr("height", cfg.h+cfg.ExtraWidthY)
       .append("g")
       .attr("transform", "translate(" + cfg.TranslateX + "," + cfg.TranslateY + ")");
-      ;
 
   var tooltip;
   
