@@ -2,15 +2,12 @@ var mrtMaker = [];
 var map;
 var mapCenter;
 
-
-
-var infoWindow = null; // 設定氣泡框 (message bubble)，顯示地標相關的資訊
+var infoWindow = null;  // 設定氣泡框 (message bubble)，顯示地標相關的資訊
 var markerShops = [];   // 設定標記叢集 (marker clusterer)
 mapCenterTry = undefined
-//{lat: 25.0261342, lng: 121.522922};
 
 function initMap() {
-      /* put in drop func*/
+  /* put in drop func*/
   const withoutPOI = [{
     featureType: "poi",
     elementType: "labels",
@@ -33,8 +30,6 @@ function trySearchResult(){
 
 function showSearchResult(searchResult,center){
   clearMarkers();
-  
-
   //看有無選取mrt
   if(center !== undefined){
     map.setCenter(center);
@@ -44,11 +39,8 @@ function showSearchResult(searchResult,center){
     map.setZoom(13);
   }
   
-
-
   for ( var i = 0; i < searchResult.length; i++){
     //console.log(searchResult[i].id);
-
     shopIcon = {
       //url: 'https://cheshirecatnick.github.io/CafeMatch/data/cafe.png',
       url: './pic/cafe.png',
@@ -62,39 +54,42 @@ function showSearchResult(searchResult,center){
         animation: google.maps.Animation.DROP,
         icon: shopIcon
     });
+    markerShop.shop = searchResult[i];
     markerShop.setMap(map);
     markerShops.push(markerShop);
-    var html = "<h3>" + searchResult[i].name + "</h3><p>" + "營業時間: "+ searchResult[i].time +"</p><p>" +"地址: "+ searchResult[i].address +"</p><p>" +"網頁: "+ searchResult[i].web +"</p>";
-    bounce(markerShop, map);
+    var html = "<h3>" + searchResult[i].name + "</h3><p>"
+                + "營業時間: "+ searchResult[i].time +"</p><p>"
+                + "地址: "+ searchResult[i].address +"</p><p>" 
+                +"網頁: "+ searchResult[i].web +"</p>";
+    addListener(markerShop, map);
     bindInfoWindow(markerShop, map, infoWindow, html);
   }
 }
 
-function bounce(markerShop, map){
-  google.maps.event.addListener(markerShop, 'click',function() {
-      if (markerShop.getAnimation() !== null) {
-        markerShop.setAnimation(null);
-      } else {
-        markerShop.setAnimation(google.maps.Animation.BOUNCE); 
-   }});
+function addListener(markerShop, map) {
+  google.maps.event.addListener(markerShop, 'click', () => {
+    if (markerShop.getAnimation() !== null) {
+      // bouncing
+      markerShop.setAnimation(null);
+      removeShopData(markerShop.shop);
+    }
+    else {
+      // not bouncing
+      markerShop.setAnimation(google.maps.Animation.BOUNCE);
+      addShopData(markerShop.shop);
+    }
+    // update info
+
+  });
 }
 // 設定地圖標記 (marker) 點開後的對話氣泡框 (message bubble)
 function bindInfoWindow(markerShop, map, infoWindow, html) {
   // 除了 click 事件，也可以用 mouseover 等事件觸發氣泡框顯示
-  google.maps.event.addListener(markerShop, 'mouseover', function() { 
-  infoWindow.setContent(html);
-  infoWindow.open(map, markerShop);
-   });
+  google.maps.event.addListener(markerShop, 'mouseover', () => { 
+    infoWindow.setContent(html);
+    infoWindow.open(map, markerShop);
+  });
 }
-
-function toggleBounce(){
-  if (markerShop.getAnimation() !== null) {
-    markerShop.setAnimation(null);
-  } else {
-    markerShop.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
-
 
 function clearMarkers() {
   for (var i = 0; i < markerShops.length; i++) {
@@ -106,7 +101,6 @@ function clearMarkers() {
 /*I think map already show the info of mrt*/
 
 function drawMrt(mrtdata){
-    
   for (var i = 0; i < mrtdata.length; i++){
     mrtIcon = {
       url: './pic/mrt.png',
