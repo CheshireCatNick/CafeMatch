@@ -23,8 +23,11 @@ let _query = {
 };
 function search(query) {
   _query = query;
+  if (_query.name)
+    // request for name; ignore other conditions
+    return shops.filter(nameFilter);
+  // name is undefined or ''; filter only by condition
   let result = shops
-    .filter(nameFilter)
     .filter(wifiPlugFilter)
     .filter(coffeePriceQuietFilter);
   // sort result by distance and MRT

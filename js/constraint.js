@@ -14,6 +14,28 @@ var slider3 = new Slider("#price", {
     ticks_snap_bounds: 30,
     step: 1
 });
+
+let _id = undefined;
+
+function selectMRT(id) {
+  // alert('MRT station ' + id + ' is selected.');
+  _id = id;
+  $('#modal-btn').html(mrts[id].station);
+  // close modal
+  $('#mrt-modal').modal('hide');
+  return false;
+}
+function reset() {
+  $('#name').val('');
+  $('#wifi').prop('checked', false);
+  $('#outlet').prop('checked', false);
+  slider1.setValue(1);
+  slider2.setValue(1);
+  slider3.setValue(5);
+  _id = undefined;
+  $('#modal-btn').html('Select MRT');
+}
+
 function submit() {
   let name = document.getElementById('name').value;
   let wifi = document.getElementById('wifi').checked;
@@ -27,13 +49,16 @@ function submit() {
     wifi: wifi,
     coffee: coffee,
     price: 6 - price,
-    MRT: undefined,
+    MRT: (_id) ? mrts[_id] : undefined,
     plug: outlet,
     quiet: quiet 
   };
   const result = search(query);
   // console.log(result);
-  showSearchResult(result, mrts[0].pos);
+  if (_id)
+    showSearchResult(result, mrts[_id].pos);
+  else
+    showSearchResult(result, undefined);
 
 
 }
