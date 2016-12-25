@@ -49,13 +49,16 @@ function submit() {
     wifi: wifi,
     coffee: coffee,
     price: 6 - price,
-    MRT: mrts[_id],
+    MRT: (_id) ? mrts[_id] : undefined,
     plug: outlet,
     quiet: quiet 
   };
   const result = search(query);
   // console.log(result);
-  showSearchResult(result, mrts[_id].pos);
+  if (_id)
+    showSearchResult(result, mrts[_id].pos);
+  else
+    showSearchResult(result, undefined);
 
 
 }
