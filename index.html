@@ -16,6 +16,7 @@
   <title>CafeMatch</title>
 </head>
 <body>
+  <!-- title -->
   <div class="row" id="title-row">
     <div class="col-lg-12" id="title">
       <div class="jumbotron">
@@ -24,6 +25,7 @@
       </div>
     </div>
   </div>
+  <!-- input -->
   <div class="row" id="input-gmap">
     <div class="col-lg-3 text-center block" id="input">
       <h1 class="header">Nice to Have</h1>
@@ -38,7 +40,7 @@
       <br>
       <input id="coffee" type="text" data-slider-value="1"/>
       <br><br>
-      <label for="usr" >quietness </label>
+      <label for="usr">quietness</label>
       <br>
       <input id="quiet" type="text" data-slider-value="1"/>
       <br><br>
@@ -46,27 +48,34 @@
       <br>
       <input id="price" type="text" data-slider-value="5"/>
       <br><br>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mrtModal">
+        Select MRT
+      </button>
       <button id="submit-btn" type="button" onclick="submit()" class="btn btn-primary">search</button>
     </div>
+    <!-- gmap -->
     <div class="col-lg-9 text-center block" id="gmap">
       <h1 class="header">Cafe Map</h1>
       <div id="map"></div>
     </div>
   </div>
-  <div class="row" id="radar-detail">
+  <!-- radar -->
+  <div class="row" id="radar-info">
     <div class="col-lg-6 text-center" id="radar">
       <h1 class="header">Analysis</h1>
       <div id="body">
         <div id="chart"></div>
       </div>
     </div>
-    <div class="col-lg-6 text-center" id="detail">
+    <!-- information -->
+    <div class="col-lg-6 text-center" id="information">
       <h1 class="header">Information</h1>
       <table class="table text-left"><tbody id="info-table">
       <!-- update by information.js -->
       </tbody></table>
     </div>
   </div>
+  <!-- footer -->
   <div class="row" id="footer">
     <div class="col-lg-12" id="footer">
       <p>&copy; 2016 D3.js course team 3<p>
