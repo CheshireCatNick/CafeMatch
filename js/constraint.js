@@ -18,9 +18,9 @@ var slider3 = new Slider("#price", {
 let _id = undefined;
 
 function selectMRT(id) {
-  alert('MRT station ' + id + ' is selected.');
+  // alert('MRT station ' + id + ' is selected.');
   _id = id;
-  $('#modal-btn').html = mrts[id].station;
+  $('#modal-btn').html(mrts[id].station);
   // close modal
   $('#mrt-modal').modal('hide');
   return false;
@@ -33,7 +33,7 @@ function reset() {
   slider2.setValue(1);
   slider3.setValue(5);
   _id = undefined;
-  $('#modal-btn').html = 'Select MRT';
+  $('#modal-btn').html('Select MRT');
 }
 
 function submit() {
