@@ -48,10 +48,148 @@
       <br>
       <input id="price" type="text" data-slider-value="5"/>
       <br><br>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mrtModal">
+      <button id="modal-btn" type="button" class="btn btn-info btn-lg"
+        data-toggle="modal" data-target="#mrt-modal">
         Select MRT
       </button>
-      <button id="submit-btn" type="button" onclick="submit()" class="btn btn-primary">search</button>
+      <button id="cancel-btn" type="button" class="btn btn-danger btn-lg"
+        onclick="reset()">
+        Reset
+      </button>
+      <br/><br/><br/>
+      <button id="submit-btn" type="button" onclick="submit()" class="btn btn-primary btn-lg">Search</button>
+    </div>
+    <!-- mrt modal -->
+    <div id="mrt-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Select MRT station</h4>
+          </div>
+          <div class="modal-body">
+            <map name="route-map">
+              <area onclick="selectMRT(60);" shape="rect" coords="35,49,67,82" alt="Tamsui">
+              <area onclick="selectMRT(57);" shape="rect" coords="82,128,118,161" alt="Guandu">
+              <area onclick="selectMRT(56);" shape="rect" coords="118,138,143,174" alt="Zhongyi">
+              <area onclick="selectMRT(54);" shape="rect" coords="216,105,261,153" alt="Xinbeitou">
+              <area onclick="selectMRT(53);" shape="rect" coords="184,136,208,176" alt="Beitou">
+              <area onclick="selectMRT(45);" shape="rect" coords="272,363,321,389" alt="Yuanshan">
+              <area onclick="selectMRT(46);" shape="rect" coords="272,327,311,355" alt="Jiantan">
+              <area onclick="selectMRT(47);" shape="rect" coords="270,301,308,323" alt="Shilin">
+              <area onclick="selectMRT(48);" shape="rect" coords="270,269,311,293" alt="Zhishan">
+              <area onclick="selectMRT(49);" shape="rect" coords="271,235,315,259" alt="Mingde">
+              <area onclick="selectMRT(50);" shape="rect" coords="254,209,288,235" alt="Shipai">
+              <area onclick="selectMRT(51);" shape="poly" coords="263,178,277,194,238,225,229,210" alt="Qilian">
+              <area onclick="selectMRT(52);" shape="rect" coords="213,168,245,193" alt="Qiyan">
+              <area onclick="selectMRT(44);" shape="rect" coords="263,396,314,440" alt="Minquan W. Rd.">
+              <area onclick="selectMRT(43);" shape="rect" coords="263,444,315,470" alt="Shuanglian">
+              <area onclick="selectMRT(42);" shape="rect" coords="263,471,312,507" alt="Zhongshan">
+              <area onclick="selectMRT(68);" shape="rect" coords="117,634,155,659" alt="Xinpu">
+              <area onclick="selectMRT(69);" shape="rect" coords="136,606,180,630" alt="Jiangzicui">
+              <area onclick="selectMRT(70);" shape="rect" coords="151,577,209,601" alt="Longshan Temple">
+              <area onclick="selectMRT(71);" shape="rect" coords="198,544,239,578" alt="Ximen">
+              <area onclick="selectMRT(72);" shape="poly" coords="302,548,338,510,337,551,312,570" alt="Shandao Temple">
+              <area onclick="selectMRT(73);" shape="rect" coords="338,513,395,566" alt="Zhongxiao Xinsheng">
+              <area onclick="selectMRT(74);" shape="rect" coords="439,523,465,565" alt="Zhongxiao Dunhua">
+              <area onclick="selectMRT(75);" shape="rect" coords="469,526,502,565" alt="Sun Yat-Sen Memorial Hall">
+              <area onclick="selectMRT(76);" shape="rect" coords="504,529,528,565" alt="Taipei City Hall">
+              <area onclick="selectMRT(78);" shape="rect" coords="556,519,581,565" alt="Houshanpi">
+              <area onclick="selectMRT(77);" shape="rect" coords="530,528,555,564" alt="Yongchun">
+              <area onclick="selectMRT(79);" shape="rect" coords="583,526,612,563" alt="Kunyang">
+              <area onclick="selectMRT(80);" shape="rect" coords="613,526,642,564" alt="Nangang">
+              <area onclick="selectMRT(13);" shape="rect" coords="596,704,629,755" alt="Taipei Zoo">
+              <area onclick="selectMRT(12);" shape="rect" coords="561,715,588,753" alt="Muzha">
+              <area onclick="selectMRT(11);" shape="rect" coords="524,713,556,751" alt="Wanfang Community">
+              <area onclick="selectMRT(10);" shape="rect" coords="479,712,526,741" alt="Wanfang Hospital">
+              <area onclick="selectMRT(8);" shape="rect" coords="479,650,513,686" alt="Linguang">
+              <area onclick="selectMRT(9);" shape="rect" coords="480,687,516,712" alt="Xinhai">
+              <area onclick="selectMRT(7);" shape="rect" coords="443,640,477,681" alt="Liuzhangli">
+              <area onclick="selectMRT(6);" shape="rect" coords="401,630,444,669" alt="Technology Building">
+              <area onclick="selectMRT(5);" shape="rect" coords="401,587,436,628" alt="Daan">
+              <area onclick="selectMRT(4);" shape="rect" coords="390,463,446,511" alt="Nanjing Fuxing">
+              <area onclick="selectMRT(3);" shape="rect" coords="396,423,452,463" alt="Zhongshan Junior High School">
+              <area onclick="selectMRT(0);" shape="rect" coords="400,516,439,565" alt="Zhongxiao Fuxing">
+              <area onclick="selectMRT(25);" shape="rect" coords="372,877,419,902" alt="Xindian">
+              <area onclick="selectMRT(38);" shape="rect" coords="186,763,241,788" alt="Nanshijiao">
+              <area onclick="selectMRT(37);" shape="rect" coords="194,725,240,752" alt="Jingan">
+              <area onclick="selectMRT(36);" shape="rect" coords="195,692,254,717" alt="Yongan Market">
+              <area onclick="selectMRT(35);" shape="rect" coords="241,667,279,692" alt="Dingxi">
+              <area onclick="selectMRT(26);" shape="rect" coords="377,842,452,868" alt="Xindian District Office">
+              <area onclick="selectMRT(27);" shape="rect" coords="374,810,422,833" alt="Qizhang">
+              <area onclick="selectMRT(28);" shape="rect" coords="374,773,425,798" alt="Dapinglin">
+              <area onclick="selectMRT(29);" shape="rect" coords="373,735,420,764" alt="Jingmei">
+              <area onclick="selectMRT(30);" shape="rect" coords="369,706,414,728" alt="Wanlong">
+              <area onclick="selectMRT(31);" shape="rect" coords="347,681,397,705" alt="Gongguan">
+              <area onclick="selectMRT(32);" shape="rect" coords="324,659,388,682" alt="Taipower Building">
+              <area onclick="selectMRT(33);" shape="rect" coords="292,638,346,660" alt="Guting">
+              <area onclick="selectMRT(34);" shape="rect" coords="238,607,292,652" alt="Chiang Kai-Shek Memorial Hall">
+              <area onclick="selectMRT(39);" shape="rect" coords="189,607,238,635" alt="Xiaonanmen">
+              <area onclick="selectMRT(40);" shape="rect" coords="271,572,325,597" alt="NTU Hospital">
+              <area onclick="selectMRT(41);" shape="poly" coords="310,508,332,515,280,565,268,553" alt="Taipei Main Station">
+              <area onclick="selectMRT(55);" shape="rect" coords="149,135,180,174" alt="Fuxinggang">
+              <area onclick="selectMRT(61);" shape="rect" coords="38,861,93,892" alt="Dingpu">
+              <area onclick="selectMRT(64);" shape="rect" coords="67,766,114,791" alt="Haishan">
+              <area onclick="selectMRT(62);" shape="rect" coords="64,829,119,860" alt="Yongning">
+              <area onclick="selectMRT(63);" shape="rect" coords="68,800,115,827" alt="Tucheng">
+              <area onclick="selectMRT(67);" shape="rect" coords="89,659,132,683" alt="Banqiao">
+              <area onclick="selectMRT(66);" shape="rect" coords="69,695,111,719" alt="Fuzhong">
+              <area onclick="selectMRT(65);" shape="rect" coords="37,730,114,758" alt="Far Eastern Hospital">
+              <area onclick="selectMRT(24);" shape="rect" coords="300,805,356,833" alt="Xiaobitan">
+              <area onclick="selectMRT(2);" shape="rect" coords="396,381,449,421" alt="SongShan Airport">
+              <area onclick="selectMRT(14);" shape="rect" coords="396,345,432,378" alt="Dazhi">
+              <area onclick="selectMRT(15);" shape="rect" coords="442,295,477,337" alt="Jiannan Rd.">
+              <area onclick="selectMRT(16);" shape="rect" coords="483,300,513,339" alt="Xihu">
+              <area onclick="selectMRT(17);" shape="rect" coords="520,299,556,338" alt="Gangqian">
+              <area onclick="selectMRT(18);" shape="rect" coords="565,301,595,340" alt="Wende">
+              <area onclick="selectMRT(19);" shape="rect" coords="605,327,630,360" alt="Neihu">
+              <area onclick="selectMRT(20);" shape="rect" coords="630,344,690,389" alt="Dahu Park">
+              <area onclick="selectMRT(21);" shape="rect" coords="641,392,682,416" alt="Huzhou">
+              <area onclick="selectMRT(22);" shape="rect" coords="643,426,686,454" alt="Donghu">
+              <area onclick="selectMRT(23);" shape="rect" coords="645,472,705,515" alt="Nangang Software Park">
+              <area onclick="selectMRT(103);" shape="rect" coords="352,568,401,630" alt="Daan Park">
+              <area onclick="selectMRT(102);" shape="rect" coords="437,576,474,629" alt="Xinyi Anhe">
+              <area onclick="selectMRT(101);" shape="rect" coords="476,568,515,631" alt="Taipei 101/World Trade Center">
+              <area onclick="selectMRT(100);" shape="rect" coords="515,584,546,633" alt="Xiangshan">
+              <area onclick="selectMRT(1);" shape="rect" coords="645,515,703,568" alt="Taipei Nangang Exhibition Center">
+              <area onclick="selectMRT(86);" shape="rect" coords="80,275,125,301" alt="Luzhou">
+              <area onclick="selectMRT(59);" shape="poly" coords="91,64,75,77,55,94,64,110,106,76" alt="Hongshulin">
+              <area onclick="selectMRT(87);" shape="rect" coords="109,300,201,324" alt="Sanmin Senior High School">
+              <area onclick="selectMRT(88);" shape="rect" coords="128,323,218,343" alt="St. Ignatius High School">
+              <area onclick="selectMRT(89);" shape="rect" coords="151,342,241,363" alt="Sanhe Junior High School">
+              <area onclick="selectMRT(90);" shape="rect" coords="167,363,266,387" alt="Sanchong Elementary School">
+              <area onclick="selectMRT(81);" shape="rect" coords="213,393,254,430" alt="Daqiaotou">
+              <area onclick="selectMRT(82);" shape="rect" coords="313,384,358,436" alt="Zhongshan Elementary School">
+              <area onclick="selectMRT(83);" shape="rect" coords="334,436,380,464" alt="Xingtian Temple">
+              <area onclick="selectMRT(84);" shape="rect" coords="334,463,386,507" alt="Songjiang Nanjing">
+              <area onclick="selectMRT(85);" shape="rect" coords="313,595,350,630" alt="Dongmen">
+              <area onclick="selectMRT(98);" shape="rect" coords="10,608,55,633" alt="Huilong">
+              <area onclick="selectMRT(99);" shape="rect" coords="40,590,84,610" alt="Danfeng">
+              <area onclick="selectMRT(91);" shape="rect" coords="59,568,125,592" alt="Fu Jen University">
+              <area onclick="selectMRT(92);" shape="rect" coords="82,548,130,568" alt="Xinzhuang">
+              <area onclick="selectMRT(93);" shape="rect" coords="103,526,165,547" alt="Touqianzhuang">
+              <area onclick="selectMRT(94);" shape="rect" coords="122,504,178,526" alt="Xianse Temple">
+              <area onclick="selectMRT(95);" shape="rect" coords="147,481,193,502" alt="Sanchong">
+              <area onclick="selectMRT(97);" shape="rect" coords="184,442,236,464" alt="Taipei Bridge">
+              <area onclick="selectMRT(96);" shape="rect" coords="168,463,207,482" alt="Cailiao">
+              <area onclick="selectMRT(104);" shape="rect" coords="197,515,235,541" alt="Beimen">
+              <area onclick="selectMRT(107);" shape="rect" coords="548,459,578,502" alt="Songshan">
+              <area onclick="selectMRT(106);" shape="rect" coords="501,451,539,500" alt="Nanjing Sanmin">
+              <area onclick="selectMRT(105);" shape="rect" coords="456,449,493,500" alt="Taipei Arena">
+              <area onclick="selectMRT(58);" shape="poly" coords="105,89,78,115,86,128,116,108" alt="Zhuwei">
+              <!--
+              <area target="_blank" href="http://english.gondola.taipei/" shape="rect" coords="550,762,653,887" alt="Maokong Gondola, opened with new window.">
+              <area href="http://english.tcap.taipei/" shape="rect" coords="233,299,272,343" target="_blank" alt="Taipei Children's Amusement Park, opened with new window.">
+              -->
+            </map>
+            <img src="./pic/mrt-route.jpg" usemap="#route-map" alt="MRT Map" border="1" width="710" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- gmap -->
     <div class="col-lg-9 text-center block" id="gmap">
@@ -84,6 +222,7 @@
   <script src="./data/mrt-data.js"></script>
   <script src="./data/shop-data.js"></script>
 
+  </script>
   <script src="./js/information.js"></script>
   <script src="./js/radar.js"></script>
   <script src="./js/gmap.js"></script>
