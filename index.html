@@ -27,7 +27,7 @@
   </div>
   <!-- input -->
   <div class="row" id="input-gmap">
-    <div class="col-lg-3 text-center block" id="input">
+    <div class="col-lg-3 col-md-3 col-sm-3 text-center block" id="input">
       <h1 class="header">Nice to Have</h1>
       <label for="usr">Name</label>
       <br>
@@ -48,11 +48,11 @@
       <br>
       <input id="price" type="text" data-slider-value="5"/>
       <br><br>
-      <button id="modal-btn" type="button" class="btn btn-info btn-lg"
+      <button id="modal-btn" type="button" class="btn btn-primary btn-lg"
         data-toggle="modal" data-target="#mrt-modal">
         Select MRT
       </button>
-      <button id="cancel-btn" type="button" class="btn btn-danger btn-lg"
+      <button id="cancel-btn" type="button" class="btn btn-primary btn-lg"
         onclick="reset()">
         Reset
       </button>
@@ -192,22 +192,22 @@
       </div>
     </div>
     <!-- gmap -->
-    <div class="col-lg-9 text-center block" id="gmap">
+    <div class="col-lg-9 col-md-9 col-sm-9 text-center block" id="gmap">
       <div id="map"></div>
     </div>
   </div>
   <!-- radar -->
   <div class="row" id="radar-info">
-    <div class="col-lg-6 text-center" id="radar">
+    <div class="col-lg-7 text-center" id="radar">
       <h1 class="header">Analysis</h1>
       <div id="body">
         <div id="chart"></div>
       </div>
     </div>
     <!-- information -->
-    <div class="col-lg-6 text-center" id="information">
+    <div class="col-lg-5 text-center" id="information">
       <h1 class="header">Information</h1>
-      <table class="table text-left"><tbody id="info-table">
+      <table class="table text-left" id="info"><tbody id="info-table">
       <!-- update by information.js -->
       </tbody></table>
     </div>

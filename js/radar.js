@@ -109,7 +109,7 @@ var RadarChart = {
     .attr("class", "legend")
     .text(function(d){return d})
     .style("font-family", "sans-serif")
-    .style("font-size", "18px")
+    .style("font-size", "16px")
     .attr("text-anchor", "middle")
     .attr("dy", "1.5em")
     .attr("transform", function(d, i){return "translate(0, -10)"})
@@ -221,8 +221,8 @@ var RadarChart = {
   }
 };
 
-const w = 500;
-const h = 500;
+const w = 300;
+const h = 300;
 const colorscale = d3.scale.category10().range();
 
 const initShop = {
@@ -290,11 +290,11 @@ function drawRadar() {
   var text = svg.append("text")
     .attr("class", "title")
     .attr('transform', 'translate(90,0)') 
-    .attr("x", w - 70)
+    .attr("x", w + 50 )
     .attr("y", 20)
     .attr("font-size", "20px")
     .attr("fill", "#404040")
-    .text("Cafe Shop");
+    .text("List");
   
 
   var legend = svg.append("g")
@@ -306,8 +306,8 @@ function drawRadar() {
     .data(legends)
     .enter()
     .append("rect")
-    .attr("x", w - 65)
-    .attr("y", function(d, i){ return i * 20 + 8; })
+    .attr("x", w + 50)
+    .attr("y", function(d, i){ return i * 20 + 20; })
     .attr("width", 10)
     .attr("height", 10)
     .style("fill", function(d, i){ return colorscale[i]; });
@@ -316,9 +316,9 @@ function drawRadar() {
     .data(legends)
     .enter()
     .append("text")
-    .attr("x", w - 52)
-    .attr("y", function(d, i){ return i * 20 + 19; })
-    .attr("font-size", "20px")
+    .attr("x", w + 63)
+    .attr("y", function(d, i){ return i * 20 + 31; })
+    .attr("font-size", "15px")
     .attr("fill", "#737373")
     .text(function(d) { return d; });
 }
