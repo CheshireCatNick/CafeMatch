@@ -31,3 +31,6 @@ function updateInfo(shop) {
   }
   table.innerHTML = context;
 }
+function resetInfo() {
+  $('#info-table').html('');
+}

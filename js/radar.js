@@ -247,7 +247,10 @@ function removeShopData(_shop) {
   });
   drawRadar();
 }
-
+function resetRadar() {
+  shopIDs = [-1];
+  drawRadar();
+}
 // Options for the Radar chart, other than default
 const mycfg = {
   w: w,
