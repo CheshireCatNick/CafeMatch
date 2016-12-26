@@ -43,7 +43,10 @@ body {
   height: 95%;
   position: absolute;
   z-index: 100;
-  background-color:rgba(207,216,220, 0.7)
+  background-color:rgba(207,216,220, 0.7);
+}
+#input button {
+  margin-bottom: 15px;
 }
 #gmap {
   height: 100%;
