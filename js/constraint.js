@@ -25,7 +25,7 @@ function selectMRT(id) {
   $('#mrt-modal').modal('hide');
   return false;
 }
-function reset() {
+function resetCon() {
   $('#name').val('');
   $('#wifi').prop('checked', false);
   $('#outlet').prop('checked', false);
@@ -35,7 +35,11 @@ function reset() {
   _id = undefined;
   $('#modal-btn').html('Select MRT');
 }
-
+function resetAll() {
+  resetRadar();
+  resetInfo();
+  clearMarkers();
+}
 function submit() {
   let name = document.getElementById('name').value;
   let wifi = document.getElementById('wifi').checked;
