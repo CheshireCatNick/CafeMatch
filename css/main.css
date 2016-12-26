@@ -22,18 +22,27 @@ body {
   background-repeat: no-repeat;
   background-size: 70% 100%;
   background-position: center;
-
   color: white;
 }
 .jumbotron h1, h2 {
   padding-left: 150px;
 }
 #input-gmap {
-  padding: 20px;
-
+  padding: 0px;
+  height: 900px;
+  position: relative;
 }
 #input {
-  background-color: #E0E0E0;
+  left: 20px;
+  top: 20px;
+  height: 95%;
+  position: absolute;
+  z-index: 100;
+  background-color:rgba(199, 194, 184, 0.7);
+}
+#gmap {
+  height: 100%;
+  width: 100%;
 }
 area {
   cursor: pointer;
@@ -42,7 +51,7 @@ area {
   margin-bottom: 55px;
 }
 #map {
-  height: 680px;
+  height: 100%;
   width: 100%;
 }
 #radar-info {
