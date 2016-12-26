@@ -19,22 +19,35 @@ body {
 .jumbotron {
   background-color: black;
   height: 250px;
-  background-image: url("../pic/cafe-background.jpg");
+  background-image: url("../pic/banner3.jpg");
   background-repeat: no-repeat;
-  background-size: 70% 100%;
+  background-size: 100% 100%;
   background-position: center;
-  margin-bottom:0px;
+  margin-bottom:20px;
   color: white;
 }
 .jumbotron h1, h2 {
   padding-left: 150px;
 }
 #input-gmap {
-  padding: 20px;
-
+  width:100%;
+  padding: 0px;
+  height: 900px;
+  position: relative;
+  margin: auto;
 }
 #input {
-  background-color: #E0E0E0;
+  left: 20px;
+  top: 20px;
+  width: 300px;
+  height: 95%;
+  position: absolute;
+  z-index: 100;
+  background-color:rgba(207,216,220, 0.7)
+}
+#gmap {
+  height: 100%;
+  width: 100%;
 }
 area {
   cursor: pointer;
@@ -43,7 +56,7 @@ area {
   margin-bottom: 55px;
 }
 #map {
-  height: 680px;
+  height: 100%;
   width: 100%;
 }
 #radar-info {

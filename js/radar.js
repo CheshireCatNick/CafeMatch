@@ -113,7 +113,7 @@ var RadarChart = {
     .attr("text-anchor", "middle")
     .attr("dy", "1.5em")
     .attr("transform", function(d, i){return "translate(0, -10)"})
-    .attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total) - 15;})
+    .attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total) - 12;})
     .attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total) - 13;});
 
  
@@ -266,12 +266,12 @@ function drawRadar() {
     let wifiSignal = (shop.wifi) ? 5 : 0;
     shopsData.push([
       {axis:"wifi",value: wifiSignal},
-      {axis:"空位",value: shop.availibility},
-      {axis:"安靜程度",value: shop.quiet},
-      {axis:"咖啡好喝",value: shop.coffee},
-      {axis:"價格便宜",value: shop.price},
-      {axis:"裝潢風格",value: shop.decoration},
-      {axis:"近捷運站",value: shop.distance_mrt},
+      {axis:"availiblity",value: shop.availibility},
+      {axis:"quietness",value: shop.quiet},
+      {axis:"decent coffee",value: shop.coffee},
+      {axis:"price",value: shop.price},
+      {axis:"style",value: shop.decoration},
+      {axis:"near MRT",value: shop.distance_mrt},
     ]);
     if (id !== -1)
       legends.push(shop.name);

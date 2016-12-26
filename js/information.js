@@ -14,14 +14,14 @@ function updateInfo(shop) {
   table.innerHTML = '';
   let context = '';
   const info = [];
-  info.push({ key: '店名', value: shop.name });
-  info.push({ key: '營業時間', value: (shop.time) ? shop.time : '未知' });
-  info.push({ key: '最近捷運站', value: shop.mrt });
-  info.push({ key: 'Wi-Fi', value: (shop.wifi) ? '有' : '無' });
-  info.push({ key: '插座', value: (shop.plug) ?  '有' : '無' });
+  info.push({ key: 'Name', value: shop.name });
+  info.push({ key: 'Open', value: (shop.time) ? shop.time : 'unknown' });
+  info.push({ key: 'Closest MRT Station', value: shop.mrt });
+  info.push({ key: 'Wifi', value: (shop.wifi) ? 'yes' : 'no' });
+  info.push({ key: 'Outlet', value: (shop.plug) ?  'yes' : 'no' });
 
-  info.push({ key: '地址', value: shop.address });
-  info.push({ key: '網頁', value: (shop.web) ? `<a href="${shop.web}">${shop.web}</a>` : '無'});
+  info.push({ key: 'Address', value: shop.address });
+  info.push({ key: 'Website', value: (shop.web) ? `<a href="${shop.web}">${shop.web}</a>` : '無'});
 
   for (let i of info) {
     context += '<tr>';
