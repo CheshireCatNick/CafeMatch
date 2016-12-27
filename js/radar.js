@@ -274,7 +274,7 @@ function drawRadar() {
       {axis:"decent coffee",value: shop.coffee},
       {axis:"price",value: shop.price},
       {axis:"style",value: shop.decoration},
-      {axis:"near MRT",value: shop.distance_mrt},
+      {axis:"MRT closeness",value: shop.distance_mrt},
     ]);
     if (id !== -1)
       legends.push(shop.name);
