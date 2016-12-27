@@ -269,11 +269,11 @@ function drawRadar() {
     let wifiSignal = (shop.wifi) ? 5 : 0;
     shopsData.push([
       {axis:"wifi",value: wifiSignal},
-      {axis:"availiblity",value: shop.availibility},
+      {axis:"seat availabity",value: shop.availibility},
       {axis:"quietness",value: shop.quiet},
       {axis:"decent coffee",value: shop.coffee},
-      {axis:"price",value: shop.price},
-      {axis:"style",value: shop.decoration},
+      {axis:"low price",value: shop.price},
+      {axis:"decoration",value: shop.decoration},
       {axis:"MRT closeness",value: shop.distance_mrt},
     ]);
     if (id !== -1)
